@@ -1,0 +1,170 @@
+.examples {
+  padding: 50px 0 130px;
+
+  & .wrap {
+    display: flex;
+
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  & .section-title {
+    margin-bottom: 28px;
+    max-width: 310px;
+
+    @media screen and (max-width: 1024px) {
+      max-width: 600px;
+    }
+  }
+  &__left-column {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 35%;
+    z-index: 10;
+    padding: 27px 20px 0 0;
+
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
+
+    & button {
+      width: 100%;
+      max-width: 277px;
+
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
+    }
+  }
+  &__image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+
+    & img {
+      position: relative;
+      left: -45px;
+    }
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      order: 3;
+    }
+
+    & button {
+      width: 100%;
+      max-width: 277px;
+    }
+  }
+  &__right-column {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    overflow-y: scroll;
+    padding-left: 80px;
+
+    @media screen and (max-width: 1024px) {
+      flex-direction: row;
+      overflow-x: scroll;
+      overflow-y: auto;
+      width: 100%;
+      order: 2;
+      padding-left: 0;
+      margin-bottom: 20px;
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+      align-items: flex-start;
+      min-width: 150px;
+      margin-right: 40px;
+    }
+
+    & img {
+      width: 112px;
+
+      @media screen and (max-width: 1024px) {
+        width: auto;
+        max-width: 100%;
+        height: 50px;
+        margin-bottom: 10px;
+      }
+    }
+    & p {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $font-black;
+      line-height: 24px;
+      opacity: .35;
+      margin-left: 38px;
+
+      @media screen and (max-width: 1024px) {
+        font-size: 1.2rem;
+        line-height: 1.2;
+        margin: 0;
+      }
+
+      & span {
+        font-size: .875rem;
+      }
+    }
+    &.active p {
+      opacity: 1;
+    }
+  }
+  &__description {
+    font-size: 1.125rem;
+    line-height: 1.56;
+    color: $font-grey;
+    font-weight: 400;
+
+    &:first-of-type {
+      margin: 0 0 17px 0;
+    }
+    &:last-of-type {
+      margin: 0 0 30px 0;
+    }
+  }
+  &__pagination-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin-bottom: 46px;
+
+    @media screen and (max-width: 1024px) {
+      align-self: center;
+    }
+  }
+  &__current-slide-number {
+    font-size: 2rem;
+    color: $violet;
+    line-height: 1;
+    font-weight: 800;
+    margin: 0 0 21px 0;
+
+    & span {
+      font-size: 3rem;
+      opacity: .15;
+    }
+  }
+  & .btn.mobile {
+    display: none;
+
+    @media screen and (max-width: 1024px) {
+      display: flex;
+      width: 100%;
+      max-width: 277px;
+      order: 4;
+      margin-top: 40px;
+    }
+  }
+}

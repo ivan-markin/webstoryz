@@ -1,0 +1,26 @@
+.section-title {
+  font-size: 3rem;
+  line-height: 1.25;
+  color: $font-black;
+  font-weight: 800;
+  margin: 0;
+
+  @media screen and (max-width: 720px) {
+    font-size: 2.5rem;
+  }
+
+  @media screen and (max-width: 375px) {
+    font-size: 2rem;
+  }
+
+  &__violet {
+    color: #8C30F5;
+  }
+  &.white {
+    color: white;
+  }
+  &.centered {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
