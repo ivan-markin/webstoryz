@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Webstoryz — Документы</title>
+</head>
+
+<body>
+  <!-- Mobile menu popup -->
+  <div class="mobile-menu-popup">
+    <div class="mobile-menu-popup__container">
+      <img class="mobile-menu-popup__logo" src="./images/main/header/webstoryz-logo.svg" alt="Webstoryz">
+      <nav class="mobile-menu-popup__menu">
+        <ul>
+          <li class="mobile-menu-popup__menu-item">
+            <a href="./faq.html">FAQ</a>
+          </li>
+          <!-- <li class="mobile-menu-popup__menu-item">
+              <a href="">Возможности</a>
+            </li> -->
+          <li class="mobile-menu-popup__menu-item">
+            <a href="index.html#tariffs">Цены</a>
+          </li>
+          <!-- <li class="mobile-menu-popup__menu-item">
+              <a href="">Для&nbsp;кого</a>
+            </li> -->
+        </ul>
+      </nav>
+
+      <div class="mobile-menu-popup__cta-block">
+        <button class="mobile-menu-popup__btn-main btn big request-button">Подключить&nbsp;виджет</button>
+        <button
+          class="mobile-menu-popup__btn-secondary btn-outlined big light request-button">Запросить&nbsp;демо</button>
+
+        <div class="mobile-menu-popup__divider"></div>
+
+        <div class="lang-select">
+          <button class="lang-select__input">
+            <span class="lang-select__lang-item ru">Рус</span>
+            <a class="lang-select__arrow"></a>
+          </button>
+          <ul class="lang-select__dropdown" style="display: none;">
+            <li class="active">
+              <span class="lang-select__lang-item ru">Рус</span>
+            </li>
+            <li>
+              <span class="lang-select__lang-item en">En</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <a class="mobile-menu-popup__close-button">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M25.4429 5.4425L24.5579 4.5575L15.0004 14.1162L5.44286 4.5575L4.55786 5.4425L14.1166 15L4.55786 24.5575L5.44286 25.4425L15.0004 15.8837L24.5579 25.4425L25.4429 24.5575L15.8841 15L25.4429 5.4425Z"
+            fill="#C4C4C4" />
+        </svg>
+      </a>
+    </div>
+    <div class="mobile-menu-popup__overlay popup-overlay"></div>
+  </div>
+  <!-- -->
+
+  <!-- Request popup -->
+  <div class="request-popup">
+    <div class="request-popup__container">
+      <h2 class="request-popup__title">Нужна консультация?</h2>
+      <p class="request-popup__description">Вы&nbsp;можете написать нам прямо сейчас!</p>
+      <p class="request-popup__choose-communication-type">Выберите предпочтительный способ связи:</p>
+      <div class="request-popup__communication-types">
+        <a href="">
+          <img src="./images/telegram-icon.svg" width="24" height="24" alt="Телеграм">
+          <span>Написать в&nbsp;Телеграм</span>
+        </a>
+        <a href="">
+          <img src="./images/whatsapp-icon.svg" width="24" height="24" alt="Whatsapp">
+          <span>Написать в&nbsp;Whatsapp</span>
+        </a>
+      </div>
+      <p class="request-popup__leave-your-details">
+        Или оставьте свои данные, чтобы наш менеджер
+        связался с&nbsp;вами для обсуждения деталей:
+      </p>
+      <form class="request-popup__form">
+        <input type="text" placeholder="Введите ваше имя">
+        <input type="e-mail" placeholder="Введите ваш номер телефона или email">
+        <button class="btn big">Оставить заявку</button>
+        <label class="checkbox">
+          <input class="checkbox__input" type="checkbox" name="" id="">
+          <span class="checkbox__view-box"></span>
+          <span class="checkbox__description">
+            Нажимая на&nbsp;кнопку, я&nbsp;даю согласие на&nbsp;<a href="">обработку персональных данных</a>
+            и&nbsp;соглашаюсь с&nbsp;<a href="">Политикой конфиденциальности</a>
+          </span>
+        </label>
+      </form>
+
+      <a class="request-popup__close-button">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M25.4429 5.4425L24.5579 4.5575L15.0004 14.1162L5.44286 4.5575L4.55786 5.4425L14.1166 15L4.55786 24.5575L5.44286 25.4425L15.0004 15.8837L24.5579 25.4425L25.4429 24.5575L15.8841 15L25.4429 5.4425Z"
+            fill="#C4C4C4" />
+        </svg>
+      </a>
+    </div>
+    <div class="request-popup__overlay popup-overlay"></div>
+  </div>
+  <!-- -->
+
+  <div class="container">
+    <header class="header inner" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500">
+      <div class="wrap">
+        <a href="index.html"><img class="header__logo" src="./images/webstoryz-logo-dark.svg" alt="Webstoryz"></a>
+        <nav class="main-menu inner">
+          <ul>
+            <li class="main-menu__item">
+              <a href="./faq.html">FAQ</a>
+            </li>
+            <!-- <li class="main-menu__item">
+              <a href="">Возможности</a>
+            </li> -->
+            <li class="main-menu__item">
+              <a href="index.html#tariffs">Цены</a>
+            </li>
+            <!-- <li class="main-menu__item">
+              <a href="">Для&nbsp;кого</a>
+            </li> -->
+          </ul>
+        </nav>
+        <div class="header__top-actions">
+          <a href="https://auth.webstoryz.com/register" target="_blank"
+            class="btn small request-button">Зарегистрироваться</a>
+          <a class="btn-outlined small dark request-button">Получить&nbsp;консультацию</a>
+          <div class="lang-select dark">
+            <button class="lang-select__input">
+              <span class="lang-select__lang-item ru">Рус</span>
+              <a class="lang-select__arrow"></a>
+            </button>
+            <ul class="lang-select__dropdown" style="display: none;">
+              <li class="active">
+                <span class="lang-select__lang-item ru">Рус</span>
+              </li>
+              <li>
+                <span class="lang-select__lang-item en">En</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main data-aos="fade" data-aos-duration="1000">
+      <div class="wrap">
+        <a href="index.html" class="back-link">На главную</a>
+
+        <section class="docs-content">
+          <h1 class="section-title">Документы</h1>
+
+          <div class="docs-content__container">
+            <div class="docs-content__tabs">
+              <a class="docs-content__tab active">Политика конфиденциальности</a>
+              <a class="docs-content__tab">Условия использования</a>
+            </div>
+            <div class="docs-content__text">
+              <h2>Заголовок</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat distinctio voluptas eius laborum soluta
+                dolorem facilis odit odio velit, sequi eos facere doloremque labore suscipit, sint praesentium atque
+                ducimus vel.
+                In qui at molestias aut voluptatum, vitae animi sint deserunt? Ullam sapiente, explicabo dolores aperiam
+                magni officia id, quia qui corrupti illum dolorem fuga vero optio magnam laborum tempora quidem?
+                Sapiente, quibusdam perspiciatis dolor eius soluta obcaecati fugit unde illum recusandae natus
+                dignissimos at deleniti eos, magni temporibus doloremque nemo error earum veritatis porro iste quam. A,
+                soluta fugit. Ipsam?
+              </p>
+              <h2>Заголовок</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat distinctio voluptas eius laborum soluta
+                dolorem facilis odit odio velit, sequi eos facere doloremque labore suscipit, sint praesentium atque
+                ducimus vel.
+                In qui at molestias aut voluptatum, vitae animi sint deserunt? Ullam sapiente, explicabo dolores aperiam
+                magni officia id, quia qui corrupti illum dolorem fuga vero optio magnam laborum tempora quidem?
+                Sapiente, quibusdam perspiciatis dolor eius soluta obcaecati fugit unde illum recusandae natus
+                dignissimos at deleniti eos, magni temporibus doloremque nemo error earum veritatis porro iste quam. A,
+                soluta fugit. Ipsam?
+              </p>
+            </div>
+          </div>
+
+          <a href="./index.html" class="inner-cta">
+            На главную
+          </a>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap" data-aos="fade" data-aos-duration="1000">
+        <a href=""><img class="footer__logo" src="./images/main/header/webstoryz-logo.svg" alt=""></a>
+        <div class="footer__actions">
+          <a href="https://auth.webstoryz.com/register" target="_blank" class="btn small">Зарегистрироваться</a>
+          <a href="https://auth.webstoryz.com/login/user" target="_blank" class="btn-outlined small light">Войти</a>
+        </div>
+        <a class="footer__connect request-button">Свяжитесь с нами</a>
+        <p class="footer__time">
+          по&nbsp;любым вопросам в&nbsp;будни<br>
+          с&nbsp;9:00 до&nbsp;20:00 по&nbsp;Московскому времени
+        </p>
+        <div class="footer__social-block">
+          <a href="">
+            <img src="./images/main/footer/facebook-icon.svg" alt="">
+          </a>
+          <a href="">
+            <img src="./images/main/footer/telegram-icon.svg" alt="">
+          </a>
+          <a href="">
+            <img src="./images/main/footer/vk-icon.svg" alt="">
+          </a>
+        </div>
+        <div class="footer__contacts">
+          <p>
+            115280, Москва, Ленинская слобода 26, строение 5<br>
+            БЦ «Симонов Плаза», офис 1.1.4<br>
+            Phone: <a href="tel:+74952209689">+7 (495) 220-96-89</a><br>
+            E-mail: <a href="mailto:support@webstoryz.com">support@webstoryz.com</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Webstoryz — F.A.Q.</title>
+</head>
+
+<body>
+  <!-- Mobile menu popup -->
+  <div class="mobile-menu-popup">
+    <div class="mobile-menu-popup__container">
+      <img class="mobile-menu-popup__logo" src="./images/main/header/webstoryz-logo.svg" alt="Webstoryz">
+      <nav class="mobile-menu-popup__menu">
+        <ul>
+          <li class="mobile-menu-popup__menu-item">
+            <a href="./faq.html">FAQ</a>
+          </li>
+          <!-- <li class="mobile-menu-popup__menu-item">
+              <a href="">Возможности</a>
+            </li> -->
+          <li class="mobile-menu-popup__menu-item">
+            <a href="index.html#tariffs">Цены</a>
+          </li>
+          <!-- <li class="mobile-menu-popup__menu-item">
+              <a href="">Для&nbsp;кого</a>
+            </li> -->
+        </ul>
+      </nav>
+
+      <div class="mobile-menu-popup__cta-block">
+        <button class="mobile-menu-popup__btn-main btn big request-button">Подключить&nbsp;виджет</button>
+        <button
+          class="mobile-menu-popup__btn-secondary btn-outlined big light request-button">Запросить&nbsp;демо</button>
+
+        <div class="mobile-menu-popup__divider"></div>
+
+        <div class="lang-select">
+          <button class="lang-select__input">
+            <span class="lang-select__lang-item ru">Рус</span>
+            <a class="lang-select__arrow"></a>
+          </button>
+          <ul class="lang-select__dropdown" style="display: none;">
+            <li class="active">
+              <span class="lang-select__lang-item ru">Рус</span>
+            </li>
+            <li>
+              <span class="lang-select__lang-item en">En</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <a class="mobile-menu-popup__close-button">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M25.4429 5.4425L24.5579 4.5575L15.0004 14.1162L5.44286 4.5575L4.55786 5.4425L14.1166 15L4.55786 24.5575L5.44286 25.4425L15.0004 15.8837L24.5579 25.4425L25.4429 24.5575L15.8841 15L25.4429 5.4425Z"
+            fill="#C4C4C4" />
+        </svg>
+      </a>
+    </div>
+    <div class="mobile-menu-popup__overlay popup-overlay"></div>
+  </div>
+  <!-- -->
+
+  <!-- Request popup -->
+  <div class="request-popup">
+    <div class="request-popup__container">
+      <h2 class="request-popup__title">Нужна консультация?</h2>
+      <p class="request-popup__description">Вы&nbsp;можете написать нам прямо сейчас!</p>
+      <p class="request-popup__choose-communication-type">Выберите предпочтительный способ связи:</p>
+      <div class="request-popup__communication-types">
+        <a href="">
+          <img src="./images/telegram-icon.svg" width="24" height="24" alt="Телеграм">
+          <span>Написать в&nbsp;Телеграм</span>
+        </a>
+        <a href="">
+          <img src="./images/whatsapp-icon.svg" width="24" height="24" alt="Whatsapp">
+          <span>Написать в&nbsp;Whatsapp</span>
+        </a>
+      </div>
+      <p class="request-popup__leave-your-details">
+        Или оставьте свои данные, чтобы наш менеджер
+        связался с&nbsp;вами для обсуждения деталей:
+      </p>
+      <form class="request-popup__form">
+        <input type="text" placeholder="Введите ваше имя">
+        <input type="e-mail" placeholder="Введите ваш номер телефона или email">
+        <button class="btn big">Оставить заявку</button>
+        <label class="checkbox">
+          <input class="checkbox__input" type="checkbox" name="" id="">
+          <span class="checkbox__view-box"></span>
+          <span class="checkbox__description">
+            Нажимая на&nbsp;кнопку, я&nbsp;даю согласие на&nbsp;<a href="">обработку персональных данных</a>
+            и&nbsp;соглашаюсь с&nbsp;<a href="">Политикой конфиденциальности</a>
+          </span>
+        </label>
+      </form>
+
+      <a class="request-popup__close-button">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M25.4429 5.4425L24.5579 4.5575L15.0004 14.1162L5.44286 4.5575L4.55786 5.4425L14.1166 15L4.55786 24.5575L5.44286 25.4425L15.0004 15.8837L24.5579 25.4425L25.4429 24.5575L15.8841 15L25.4429 5.4425Z"
+            fill="#C4C4C4" />
+        </svg>
+      </a>
+    </div>
+    <div class="request-popup__overlay popup-overlay"></div>
+  </div>
+  <!-- -->
+
+  <div class="container">
+    <header class="header inner" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500">
+      <div class="wrap">
+        <a href="index.html"><img class="header__logo" src="./images/webstoryz-logo-dark.svg" alt="Webstoryz"></a>
+        <nav class="main-menu inner">
+          <ul>
+            <li class="main-menu__item">
+              <a href="">FAQ</a>
+            </li>
+            <!-- <li class="main-menu__item">
+              <a href="">Возможности</a>
+            </li> -->
+            <li class="main-menu__item">
+              <a href="index.html#tariffs">Цены</a>
+            </li>
+            <!-- <li class="main-menu__item">
+              <a href="">Для&nbsp;кого</a>
+            </li> -->
+          </ul>
+        </nav>
+        <div class="header__top-actions">
+          <a href="https://auth.webstoryz.com/register" target="_blank"
+            class="btn small request-button">Зарегистрироваться</a>
+          <a class="btn-outlined small dark request-button">Получить&nbsp;консультацию</a>
+          <div class="lang-select dark">
+            <button class="lang-select__input">
+              <span class="lang-select__lang-item ru">Рус</span>
+              <a class="lang-select__arrow"></a>
+            </button>
+            <ul class="lang-select__dropdown">
+              <li class="active">
+                <span class="lang-select__lang-item ru">Рус</span>
+              </li>
+              <li>
+                <span class="lang-select__lang-item en">En</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <a class="header__menu-button">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z" fill="white" />
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <main data-aos="fade" data-aos-duration="1000">
+      <div class="wrap">
+        <a href="index.html" class="back-link">На главную</a>
+
+        <section class="faq-content">
+          <h1 class="section-title">FAQ</h1>
+          <p class="faq-content__description">Часто задаваемые вопросы от&nbsp;пользователей</p>
+          <div class="faq-content__tabs">
+            <a class="faq-content__tab active">Виджет</a>
+            <a class="faq-content__tab">Веб-сториз</a>
+            <a class="faq-content__tab">Тарифы</a>
+            <a class="faq-content__tab">Прочее</a>
+          </div>
+
+          <div class="faq-content__tab-content">
+            <h2 class="faq-content__tab-content-title">Как я&nbsp;могу интегрировать виджет на&nbsp;сайт?</h2>
+            <p>
+              Для того, чтобы разместить виджет на&nbsp;вашем сайте, нужно вставить html-код, который вы&nbsp;получите
+              после cоздания виджета.
+            </p>
+            <a class="faq-content__tab-content-close">
+              <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M10.0013 8.66699H18.0013V10.0003H10.0013V18.0003H8.66797V10.0003H0.667969V8.66699H8.66797V0.666992H10.0013V8.66699Z"
+                  fill="black" />
+              </svg>
+            </a>
+          </div>
+          <div class="faq-content__tab-content">
+            <h2 class="faq-content__tab-content-title">Могу ли&nbsp;я&nbsp;перенести сторис / «актуальное» из&nbsp;моей
+              страницы в&nbsp;Инстаграм?</h2>
+            <p>
+              Для того, чтобы разместить виджет на&nbsp;вашем сайте, нужно вставить html-код, который вы&nbsp;получите
+              после cоздания виджета.
+            </p>
+            <a class="faq-content__tab-content-close">
+              <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M10.0013 8.66699H18.0013V10.0003H10.0013V18.0003H8.66797V10.0003H0.667969V8.66699H8.66797V0.666992H10.0013V8.66699Z"
+                  fill="black" />
+              </svg>
+            </a>
+          </div>
+          <div class="faq-content__tab-content">
+            <h2 class="faq-content__tab-content-title">Могу ли&nbsp;я&nbsp;добавить виджет на&nbsp;любой сайт? Есть
+              ли&nbsp;какие-то ограничения?</h2>
+            <p>
+              Для того, чтобы разместить виджет на&nbsp;вашем сайте, нужно вставить html-код, который вы&nbsp;получите
+              после cоздания виджета.
+            </p>
+            <a class="faq-content__tab-content-close">
+              <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M10.0013 8.66699H18.0013V10.0003H10.0013V18.0003H8.66797V10.0003H0.667969V8.66699H8.66797V0.666992H10.0013V8.66699Z"
+                  fill="black" />
+              </svg>
+            </a>
+          </div>
+          <div class="faq-content__tab-content">
+            <h2 class="faq-content__tab-content-title">Могу ли&nbsp;я&nbsp;поменять тариф?</h2>
+            <p>
+              Для того, чтобы разместить виджет на&nbsp;вашем сайте, нужно вставить html-код, который вы&nbsp;получите
+              после cоздания виджета.
+            </p>
+            <a class="faq-content__tab-content-close">
+              <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M10.0013 8.66699H18.0013V10.0003H10.0013V18.0003H8.66797V10.0003H0.667969V8.66699H8.66797V0.666992H10.0013V8.66699Z"
+                  fill="black" />
+              </svg>
+            </a>
+          </div>
+          <div class="faq-content__tab-content">
+            <h2 class="faq-content__tab-content-title">Могу ли&nbsp;я&nbsp;посмотреть статистику по&nbsp;виджету?</h2>
+            <p>
+              Для того, чтобы разместить виджет на&nbsp;вашем сайте, нужно вставить html-код, который вы&nbsp;получите
+              после cоздания виджета.
+            </p>
+            <a class="faq-content__tab-content-close">
+              <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M10.0013 8.66699H18.0013V10.0003H10.0013V18.0003H8.66797V10.0003H0.667969V8.66699H8.66797V0.666992H10.0013V8.66699Z"
+                  fill="black" />
+              </svg>
+            </a>
+          </div>
+          <div class="faq-content__tab-content">
+            <h2 class="faq-content__tab-content-title">Могу ли&nbsp;я&nbsp;оплатить счет от&nbsp;лица компании?</h2>
+            <p>
+              Для того, чтобы разместить виджет на&nbsp;вашем сайте, нужно вставить html-код, который вы&nbsp;получите
+              после cоздания виджета.
+            </p>
+            <a class="faq-content__tab-content-close">
+              <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M10.0013 8.66699H18.0013V10.0003H10.0013V18.0003H8.66797V10.0003H0.667969V8.66699H8.66797V0.666992H10.0013V8.66699Z"
+                  fill="black" />
+              </svg>
+            </a>
+          </div>
+          <div class="faq-content__tab-content">
+            <h2 class="faq-content__tab-content-title">Есть ли&nbsp;ограничение по&nbsp;количеству виджетов
+              и&nbsp;хайлайтов, которые я&nbsp;могу установить?
+            </h2>
+            <p>
+              Для того, чтобы разместить виджет на&nbsp;вашем сайте, нужно вставить html-код, который вы&nbsp;получите
+              после cоздания виджета.
+            </p>
+            <a class="faq-content__tab-content-close">
+              <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M10.0013 8.66699H18.0013V10.0003H10.0013V18.0003H8.66797V10.0003H0.667969V8.66699H8.66797V0.666992H10.0013V8.66699Z"
+                  fill="black" />
+              </svg>
+            </a>
+          </div>
+
+          <button class="inner-cta request-button">
+            Не&nbsp;нашли ответ на&nbsp;свой вопрос? Задайте его нам
+          </button>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap" data-aos="fade" data-aos-duration="1000">
+        <a href=""><img class="footer__logo" src="./images/main/header/webstoryz-logo.svg" alt=""></a>
+        <div class="footer__actions">
+          <a href="https://auth.webstoryz.com/register" target="_blank" class="btn small">Зарегистрироваться</a>
+          <a href="https://auth.webstoryz.com/login/user" target="_blank" class="btn-outlined small light">Войти</a>
+        </div>
+        <a class="footer__connect request-button">Свяжитесь с нами</a>
+        <p class="footer__time">
+          по&nbsp;любым вопросам в&nbsp;будни<br>
+          с&nbsp;9:00 до&nbsp;20:00 по&nbsp;Московскому времени
+        </p>
+        <div class="footer__social-block">
+          <a href="">
+            <img src="./images/main/footer/facebook-icon.svg" alt="">
+          </a>
+          <a href="">
+            <img src="./images/main/footer/telegram-icon.svg" alt="">
+          </a>
+          <a href="">
+            <img src="./images/main/footer/vk-icon.svg" alt="">
+          </a>
+        </div>
+        <div class="footer__contacts">
+          <p>
+            115280, Москва, Ленинская слобода 26, строение 5<br>
+            БЦ «Симонов Плаза», офис 1.1.4<br>
+            Phone: <a href="tel:+74952209689">+7 (495) 220-96-89</a><br>
+            E-mail: <a href="mailto:support@webstoryz.com">support@webstoryz.com</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./bundle.js"></script>
+</body>
+
+</html>

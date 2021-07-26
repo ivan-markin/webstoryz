@@ -10,36 +10,142 @@
 </head>
 
 <body>
+
+  <!-- Mobile menu popup -->
+  <div class="mobile-menu-popup">
+    <div class="mobile-menu-popup__container">
+      <img class="mobile-menu-popup__logo" src="./images/main/header/webstoryz-logo.svg" alt="Webstoryz">
+      <nav class="mobile-menu-popup__menu">
+        <ul>
+          <li class="mobile-menu-popup__menu-item">
+            <a href="./faq.html">FAQ</a>
+          </li>
+          <!-- <li class="mobile-menu-popup__menu-item">
+            <a href="">Возможности</a>
+          </li> -->
+          <li class="mobile-menu-popup__menu-item">
+            <a href="index.html#tariffs">Цены</a>
+          </li>
+          <!-- <li class="mobile-menu-popup__menu-item">
+            <a href="">Для&nbsp;кого</a>
+          </li> -->
+        </ul>
+      </nav>
+
+      <div class="mobile-menu-popup__cta-block">
+        <button class="mobile-menu-popup__btn-main btn big request-button">Подключить&nbsp;виджет</button>
+        <button
+          class="mobile-menu-popup__btn-secondary btn-outlined big light request-button">Запросить&nbsp;демо</button>
+
+        <div class="mobile-menu-popup__divider"></div>
+
+        <div class="lang-select to-top">
+          <button class="lang-select__input">
+            <span class="lang-select__lang-item ru">Рус</span>
+            <a class="lang-select__arrow"></a>
+          </button>
+          <ul class="lang-select__dropdown">
+            <li class="active">
+              <span class="lang-select__lang-item ru">Рус</span>
+            </li>
+            <li>
+              <span class="lang-select__lang-item en">En</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <a class="mobile-menu-popup__close-button">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M25.4429 5.4425L24.5579 4.5575L15.0004 14.1162L5.44286 4.5575L4.55786 5.4425L14.1166 15L4.55786 24.5575L5.44286 25.4425L15.0004 15.8837L24.5579 25.4425L25.4429 24.5575L15.8841 15L25.4429 5.4425Z"
+            fill="#C4C4C4" />
+        </svg>
+      </a>
+    </div>
+    <div class="mobile-menu-popup__overlay popup-overlay"></div>
+  </div>
+  <!-- -->
+
+  <!-- Request popup -->
+  <div class="request-popup">
+    <div class="request-popup__container">
+      <h2 class="request-popup__title">Нужна консультация?</h2>
+      <p class="request-popup__description">Вы&nbsp;можете написать нам прямо сейчас!</p>
+      <p class="request-popup__choose-communication-type">Выберите предпочтительный способ связи:</p>
+      <div class="request-popup__communication-types">
+        <a href="">
+          <img src="./images/telegram-icon.svg" width="24" height="24" alt="Телеграм">
+          <span>Написать в&nbsp;Телеграм</span>
+        </a>
+        <a href="">
+          <img src="./images/whatsapp-icon.svg" width="24" height="24" alt="Whatsapp">
+          <span>Написать в&nbsp;Whatsapp</span>
+        </a>
+      </div>
+      <p class="request-popup__leave-your-details">
+        Или оставьте свои данные, чтобы наш менеджер
+        связался с&nbsp;вами для обсуждения деталей:
+      </p>
+      <form class="request-popup__form">
+        <input type="text" placeholder="Введите ваше имя">
+        <input type="e-mail" placeholder="Введите ваш номер телефона или email">
+        <button class="btn big">Оставить заявку</button>
+        <label class="checkbox">
+          <input class="checkbox__input" type="checkbox" name="" id="">
+          <span class="checkbox__view-box"></span>
+          <span class="checkbox__description">
+            Нажимая на&nbsp;кнопку, я&nbsp;даю согласие на&nbsp;<a href="">обработку персональных данных</a>
+            и&nbsp;соглашаюсь с&nbsp;<a href="">Политикой конфиденциальности</a>
+          </span>
+        </label>
+      </form>
+
+      <a class="request-popup__close-button">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M25.4429 5.4425L24.5579 4.5575L15.0004 14.1162L5.44286 4.5575L4.55786 5.4425L14.1166 15L4.55786 24.5575L5.44286 25.4425L15.0004 15.8837L24.5579 25.4425L25.4429 24.5575L15.8841 15L25.4429 5.4425Z"
+            fill="#C4C4C4" />
+        </svg>
+      </a>
+    </div>
+    <div class="request-popup__overlay popup-overlay"></div>
+  </div>
+  <!-- -->
+
   <div class="container">
+
+    <!-- Header -->
     <header class="header">
       <div class="wrap">
-        <div class="header__top">
+        <div class="header__top" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500">
           <img class="header__logo" src="./images/main/header/webstoryz-logo.svg" alt="Webstoryz">
           <nav class="main-menu">
             <ul>
               <li class="main-menu__item">
-                <a href="">FAQ</a>
+                <a href="./faq.html">FAQ</a>
               </li>
-              <li class="main-menu__item">
+              <!-- <li class="main-menu__item">
                 <a href="">Возможности</a>
-              </li>
+              </li> -->
               <li class="main-menu__item">
-                <a href="">Цены</a>
+                <a id="priceLink">Цены</a>
               </li>
-              <li class="main-menu__item">
+              <!-- <li class="main-menu__item">
                 <a href="">Для&nbsp;кого</a>
-              </li>
+              </li> -->
             </ul>
           </nav>
           <div class="header__top-actions">
-            <button class="btn small">Зарегистрироваться</button>
-            <button class="btn-outlined small light">Получить&nbsp;консультацию</button>
+            <a href="https://auth.webstoryz.com/register" target="_blank"
+              class="btn small request-button">Зарегистрироваться</a>
+            <a class="btn-outlined small light request-button">Получить&nbsp;консультацию</a>
             <div class="lang-select">
               <button class="lang-select__input">
                 <span class="lang-select__lang-item ru">Рус</span>
                 <a class="lang-select__arrow"></a>
               </button>
-              <ul class="lang-select__dropdown" style="display: none;">
+              <ul class="lang-select__dropdown">
                 <li class="active">
                   <span class="lang-select__lang-item ru">Рус</span>
                 </li>
@@ -49,9 +155,14 @@
               </ul>
             </div>
           </div>
+          <a class="header__menu-button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z" fill="white" />
+            </svg>
+          </a>
         </div>
 
-        <div class="header__title-block">
+        <div class="header__title-block" data-aos="fade" data-aos-duration="1500">
           <h1 class="main-title">Управляйте вниманием посетителей на&nbsp;сайте и&nbsp;в&nbsp;приложении!</h1>
           <p class="main-title-description">
             Установите веб-сторис виджет на&nbsp;сайт или в&nbsp;приложение и&nbsp;<strong>кратно увеличьте
@@ -59,30 +170,32 @@
               метрики</strong>, которые влияют на&nbsp;конверсию
           </p>
           <div class="header__main-actions">
-            <button class="btn big">Подключить&nbsp;виджет</button>
-            <button class="btn-outlined big light">Запросить&nbsp;демо</button>
+            <button class="btn big request-button">Подключить&nbsp;виджет</button>
+            <button class="btn-outlined big light request-button">Запросить&nbsp;демо</button>
           </div>
         </div>
       </div>
 
       <div class="header-image">
         <picture>
-          <source srcset="./images/main/header/tablet.webp, ./images/main/header/tablet@2x.webp 2x">
-          <source srcset="./images/main/header/tablet.png, ./images/main/header/tablet@2x.png 2x">
-          <img class="header-image__tablet" src="./images/main/header/tablet.png" alt="Планшет">
+          <source srcset="./images/main/header/tablet.webp, ./images/main/header/tablet@2x.webp 2x" type="image/webp">
+          <source srcset="./images/main/header/tablet.png, ./images/main/header/tablet@2x.png 2x" type="image/png">
+          <img class="header-image__tablet" src="./images/main/header/tablet.png" alt="Планшет" data-aos="fade-left"
+            data-aos-duration="1000" data-aos-delay="1000">
         </picture>
 
         <picture>
-          <source srcset="./images/main/header/phone.webp, ./images/main/header/phone@2x.webp 2x">
-          <source srcset="./images/main/header/phone.png, ./images/main/header/phone@2x.png 2x">
-          <img class="header-image__phone" src="./images/main/header/phone.png" alt="Телефон">
+          <source srcset="./images/main/header/phone.webp, ./images/main/header/phone@2x.webp 2x" type="image/webp">
+          <source srcset="./images/main/header/phone.png, ./images/main/header/phone@2x.png 2x" type="image/png">
+          <img class="header-image__phone" src="./images/main/header/phone.png" alt="Телефон" data-aos="fade-left"
+            data-aos-duration="800" data-aos-delay="1400">
         </picture>
 
-        <div class="header-image__time-spent">
+        <div class="header-image__time-spent" data-aos="fade-right" data-aos-duration="800">
           <img src="./images/main/header/days-graph.svg" alt="Время нахождения на сайте">
         </div>
 
-        <div class="header-image__traffic-conversion">
+        <div class="header-image__traffic-conversion" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
           <img src="./images/main/header/diagram.svg" alt="Конверсия мобильного трафика">
         </div>
       </div>
@@ -100,7 +213,9 @@
     </header>
 
     <main class="main">
-      <section class="widget-example">
+
+      <!-- SECTION 1: Пример виджета -->
+      <section class="widget-example" data-aos="fade-up" data-aos-duration="1000">
         <div class="wrap">
           <h2 class="section-title">Пример виджета</h2>
           <p class="widget-example__description">
@@ -110,7 +225,8 @@
         </div>
       </section>
 
-      <section class="trust-us">
+      <!-- SECTION 2: Нам доверяют -->
+      <section class="trust-us" data-aos="fade-up" data-aos-duration="1000">
         <div class="wrap">
           <h2 class="section-title">Нам доверяют</h2>
           <p class="trust-us__description">
@@ -199,14 +315,15 @@
               </a>
             </div>
           </div>
-          <button class="btn big">Подключить 14-дневный пробный период</button>
+          <button class="btn big request-button">Подключить 14-дневный пробный период</button>
           <p class="trust-us__card-not-required">Банковская карта НЕ&nbsp;ТРЕБУЕТСЯ</p>
         </div>
       </section>
 
+      <!-- SECTION 3: О сервисе -->
       <section class="about-webstoryz">
         <div class="wrap">
-          <p class="about-webstoryz__text-block">
+          <p class="about-webstoryz__text-block" data-aos="fade" data-aos-duration="1000">
             Webstoryz перенёс <a class="about-webstoryz__link popular-format active" id="popularFormat">популярный
               формат</a>
             мобильного
@@ -221,24 +338,17 @@
             в&nbsp;виджете на&nbsp;вашем сайте или
             в&nbsp;приложении.
           </p>
-          <div class="about-webstoryz__image-container">
+          <div class="about-webstoryz__image-container" data-aos="fade-left" data-aos-duration="1000"
+            data-aos-delay="500">
             <div class="about-webstoryz__image active" id="popularFormatImage">
-              <div class="about-webstoryz__image-like">
-                <img src="./images/main/about-webstoryz/heart.svg" alt="">
-              </div>
-
-              <img class="about-webstoryz__image-yes-no" src="./images/main/about-webstoryz/yes-no.svg" alt="">
-
-              <div class="about-webstoryz__image-button">
-                <img src="./images/main/about-webstoryz/button-text.svg" alt="">
-                <img class="about-webstoryz__image-tap" src="./images/main/about-webstoryz/tap.svg" alt="">
-              </div>
-
               <picture>
                 <source
-                  srcset="./images/main/about-webstoryz/phone.webp, ./images/main/about-webstoryz/phone@2x.webp 2x">
-                <source srcset="./images/main/about-webstoryz/phone.png, ./images/main/about-webstoryz/phone@2x.png 2x">
-                <img class="about-webstoryz__image-phone" src="./images/main/about-webstoryz/phone.png" alt="">
+                  srcset="./images/main/about-webstoryz/slide-1/phone.webp, ./images/main/about-webstoryz/slide-1/phone@2x.webp 2x"
+                  type="image/webp">
+                <source
+                  srcset="./images/main/about-webstoryz/slide-1/phone.png, ./images/main/about-webstoryz/slide-1/phone@2x.png 2x"
+                  type="image/png">
+                <img class="about-webstoryz__image-phone" src="./images/main/about-webstoryz/slide-1/phone.png" alt="">
               </picture>
             </div>
 
@@ -247,44 +357,50 @@
                 <img src="./images/main/about-webstoryz/heart.svg" alt="">
               </div>
 
-              <img class="about-webstoryz__image-yes-no" src="./images/main/about-webstoryz/yes-no.svg" alt="">
+              <img class="about-webstoryz__image-yes-no" src="./images/main/about-webstoryz/slide-2/poll.svg" alt="">
 
               <div class="about-webstoryz__image-button">
-                <img src="./images/main/about-webstoryz/button-text.svg" alt="">
-                <img class="about-webstoryz__image-tap" src="./images/main/about-webstoryz/tap.svg" alt="">
+                <img src="./images/main/about-webstoryz/slide-2/button-text.svg" alt="">
+                <img class="about-webstoryz__image-tap" src="./images/main/about-webstoryz/slide-2/tap.svg" alt="">
               </div>
 
               <picture>
                 <source
-                  srcset="./images/main/about-webstoryz/phone.webp, ./images/main/about-webstoryz/phone@2x.webp 2x">
-                <source srcset="./images/main/about-webstoryz/phone.png, ./images/main/about-webstoryz/phone@2x.png 2x">
-                <img class="about-webstoryz__image-phone" src="./images/main/about-webstoryz/phone.png" alt="">
+                  srcset="./images/main/about-webstoryz/slide-2/phone.webp, ./images/main/about-webstoryz/slide-2/phone@2x.webp 2x"
+                  type="image/webp">
+                <source
+                  srcset="./images/main/about-webstoryz/slide-2/phone.png, ./images/main/about-webstoryz/slide-2/phone@2x.png 2x"
+                  type="image/png">
+                <img class="about-webstoryz__image-phone" src="./images/main/about-webstoryz/slide-2/phone.png" alt="">
               </picture>
             </div>
 
             <div class="about-webstoryz__image" id="personalizedImage">
-              <div class="about-webstoryz__image-like">
-                <img src="./images/main/about-webstoryz/heart.svg" alt="">
-              </div>
+              <picture>
+                <source
+                  srcset="./images/main/about-webstoryz/slide-3/nav-panel.png, ./images/main/about-webstoryz/slide-3/nav-panel@2x.png 2x"
+                  type="image/png">
+                <img class="about-webstoryz__image-nav-panel" src="./images/main/about-webstoryz/slide-3/nav-panel.png">
+              </picture>
 
-              <img class="about-webstoryz__image-yes-no" src="./images/main/about-webstoryz/yes-no.svg" alt="">
-
-              <div class="about-webstoryz__image-button">
-                <img src="./images/main/about-webstoryz/button-text.svg" alt="">
-                <img class="about-webstoryz__image-tap" src="./images/main/about-webstoryz/tap.svg" alt="">
-              </div>
+              <img class="about-webstoryz__image-roboto" src="./images/main/about-webstoryz/slide-3/roboto.svg" alt="">
+              <img class="about-webstoryz__image-t" src="./images/main/about-webstoryz/slide-3/t.svg" alt="">
 
               <picture>
                 <source
-                  srcset="./images/main/about-webstoryz/phone.webp, ./images/main/about-webstoryz/phone@2x.webp 2x">
-                <source srcset="./images/main/about-webstoryz/phone.png, ./images/main/about-webstoryz/phone@2x.png 2x">
-                <img class="about-webstoryz__image-phone" src="./images/main/about-webstoryz/phone.png" alt="">
+                  srcset="./images/main/about-webstoryz/slide-3/phone.webp, ./images/main/about-webstoryz/slide-3/phone@2x.webp 2x"
+                  type="image/webp">
+                <source
+                  srcset="./images/main/about-webstoryz/slide-3/phone.png, ./images/main/about-webstoryz/slide-3/phone@2x.png 2x"
+                  type="image/png">
+                <img class="about-webstoryz__image-phone" src="./images/main/about-webstoryz/slide-3/phone.png" alt="">
               </picture>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- SECTION 4: Ключевые метрики растут -->
       <section class="key-metrics">
         <div class="key-metrics__content">
           <div class="wrap">
@@ -296,7 +412,7 @@
           </div>
           <div class="key-metrics__indicators">
             <div class="wrap">
-              <div class="key-metrics__indicator">
+              <div class="key-metrics__indicator" data-aos="flip-up" data-aos-duration="600">
                 <div class="key-metrics__indicator-content">
                   <h3 class="key-metrics__indicator-title">+30<span>%</span></h3>
                   <p class="key-metrics__indicator-description">
@@ -331,7 +447,7 @@
                 <!--  -->
               </div>
 
-              <div class="key-metrics__indicator">
+              <div class="key-metrics__indicator" data-aos="flip-up" data-aos-duration="600" data-aos-delay="100">
                 <div class="key-metrics__indicator-content">
                   <h3 class="key-metrics__indicator-title">x2</h3>
                   <p class="key-metrics__indicator-description">
@@ -365,7 +481,7 @@
                 <!--  -->
               </div>
 
-              <div class="key-metrics__indicator">
+              <div class="key-metrics__indicator" data-aos="flip-up" data-aos-duration="600" data-aos-delay="200">
                 <div class="key-metrics__indicator-content">
                   <h3 class="key-metrics__indicator-title">+20<span>%</span></h3>
                   <p class="key-metrics__indicator-description">
@@ -403,9 +519,10 @@
         </div>
       </section>
 
+      <!-- SECTION 5: Лидеры рынка -->
       <section class="market-leaders">
         <div class="wrap">
-          <div class="market-leaders__text-block">
+          <div class="market-leaders__text-block" data-aos="fade" data-aos-duration="1000">
             <h2 class="section-title">
               <span class="section-title__violet">Лидеры рынка</span> активно внедряют формат сторис
               в&nbsp;свои сервисы
@@ -419,12 +536,13 @@
               </li>
             </ul>
           </div>
-          <div class="market-leaders__image">
+          <div class="market-leaders__image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">
             <img src="./images/main/market-leaders/section-image.png" alt="">
           </div>
         </div>
       </section>
 
+      <!-- SECTION 6: Веб-сторис — эффективный инструмент -->
       <section class="effective-tool">
         <div class="wrap">
           <h2 class="section-title centered">
@@ -432,13 +550,42 @@
             маркетинговый инструмент в&nbsp;2021 году
           </h2>
           <div class="effective-tool__content">
-            <div class="effective-tool__image slide-1">
-              <img class="rate-slider" src="./images/main/effective-tool/slide-1/rate-slider.svg" alt="">
-              <img class="survey" src="./images/main/effective-tool/slide-1/survey.svg" alt="">
-              <div class="smile">
-                <img src="./images/main/effective-tool/slide-1/smile.svg" alt="">
+            <div class="effective-tool__image-container" data-aos="fade-right" data-aos-duration="1000">
+              <div class="effective-tool__image active" id="contestsImage">
+                <img class="rate-slider image-part" src="./images/main/effective-tool/slide-1/rate-slider.svg" alt="">
+                <img class="survey image-part" src="./images/main/effective-tool/slide-1/survey.svg" alt="">
+                <div class="smile image-part">
+                  <img src="./images/main/effective-tool/slide-1/smile.svg" alt="">
+                </div>
+                <img class="phone" src="./images/main/effective-tool/slide-1/phone.png" alt="">
               </div>
-              <img class="phone" src="./images/main/effective-tool/slide-1/phone.png" alt="">
+
+              <div class="effective-tool__image" id="sellImage">
+                <div class="smile image-part">
+                  <img src="./images/main/effective-tool/slide-2/smile.svg" alt="">
+                </div>
+                <div class="viber image-part">
+                  <img src="./images/main/effective-tool/slide-2/viber.svg" alt="">
+                </div>
+                <div class="fire image-part">
+                  <img src="./images/main/effective-tool/slide-2/fire.svg" alt="">
+                </div>
+                <div class="buy-button image-part">
+                  <img src="./images/main/effective-tool/slide-2/buy-text.svg" alt="">
+                  <img class="buy-button-tap" src="./images/main/effective-tool/slide-2/tap.svg" alt="">
+                </div>
+                <img class="phone" src="./images/main/effective-tool/slide-2/phone.jpg" alt="">
+              </div>
+
+              <div class="effective-tool__image" id="valueImage">
+                <div class="hand image-part">
+                  <img src="./images/main/effective-tool/slide-3/hand.svg" alt="">
+                </div>
+                <div class="checkmark image-part">
+                  <img src="./images/main/effective-tool/slide-3/checkmark.svg" alt="">
+                </div>
+                <img class="phone" src="./images/main/effective-tool/slide-3/phone.jpg" alt="">
+              </div>
             </div>
             <div class="effective-tool__tabs">
               <div class="effective-tool__tab active" id="contests">
@@ -449,19 +596,31 @@
                   на&nbsp;слайде форму опросов и&nbsp;квизов, которые
                   вы можете создать в&nbsp;нашем конструкторе.
                 </p>
+                <a></a>
               </div>
               <div class="effective-tool__tab" id="sell">
-                <span>
+                <img src="./images/main/effective-tool/tabs/tab-2-img.png" alt="">
+                <h3>
                   Продавайте товары и&nbsp;услуги
                   прямо в&nbsp;веб-сторис!
-                </span>
+                </h3>
+                <p>
+                  Добавьте фотографии или видео товара с&nbsp;интерактивными
+                  элементами конвертации (кнопки)
+                </p>
                 <a></a>
               </div>
               <div class="effective-tool__tab" id="value">
-                <span>
+                <img src="./images/main/effective-tool/tabs/tab-3-img.png" alt="">
+                <h3>
                   Несите клиенту ценность,
                   делитесь полезным контентом
-                </span>
+                </h3>
+                <p>
+                  Делайте онбординг клиентов в&nbsp;личном кабинете
+                  на&nbsp;сайте или в&nbsp;приложении, рассказывайте о&nbsp;новостях
+                  и&nbsp;акциях компании.
+                </p>
                 <a></a>
               </div>
             </div>
@@ -469,10 +628,11 @@
         </div>
       </section>
 
+      <!-- SECTION 7: Установите виджет -->
       <section class="install-widget">
         <div class="wrap">
           <div class="install-widget__content">
-            <div class="install-widget__text-block">
+            <div class="install-widget__text-block" data-aos="fade" data-aos-duration="1000">
               <h2 class="section-title">Установите виджет веб-сторис и&nbsp;растите ключевые метрики!</h2>
               <p class="install-widget__description">
                 Создайте сторис, разместите их в&nbsp;виджете и&nbsp;добавьте виджет на&nbsp;сайт!
@@ -493,36 +653,42 @@
             <div class="install-widget__image">
               <picture>
                 <source srcset="./images/main/install-widget/coin.png, ./images/main/install-widget/coin@2x.png 2x">
-                <img class="coin" src="./images/main/install-widget/coin.png" alt="">
+                <img class="coin" src="./images/main/install-widget/coin.png" alt="" data-aos="fade-down"
+                  data-aos-duration="600" data-aos-delay="200">
               </picture>
               <picture>
                 <source srcset="./images/main/install-widget/widget.png, ./images/main/install-widget/widget.png 2x">
-                <img class="widget" src="./images/main/install-widget/widget.png" alt="">
+                <img class="widget" src="./images/main/install-widget/widget.png" alt="" data-aos="fade-left"
+                  data-aos-duration="600" data-aos-delay="200">
               </picture>
-              <div class="to-catalog">
+              <div class="to-catalog" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
                 <img src="./images/main/install-widget/button-text.svg" alt="">
                 <img class="finger" src="./images/main/install-widget/finger.svg" alt="">
               </div>
-              <img class="timer" src="./images/main/install-widget/timer.svg" alt="">
-              <img class="qwiz" src="./images/main/install-widget/qwiz.svg" alt="">
-              <img class="phone" src="./images/main/install-widget/phone.png" alt="">
+              <img class="timer" src="./images/main/install-widget/timer.svg" alt="" data-aos="fade-down-right"
+                data-aos-duration="600" data-aos-delay="200">
+              <img class="qwiz" src="./images/main/install-widget/qwiz.svg" alt="" data-aos="fade-down-left"
+                data-aos-duration="600" data-aos-delay="200">
+              <img class="phone" src="./images/main/install-widget/phone.png" alt="" data-aos="fade"
+                data-aos-duration="1000" data-aos-delay="200">
             </div>
           </div>
         </div>
       </section>
 
+      <!-- SECTION 8: Четыре простых шага -->
       <section class="four-steps">
         <div class="wrap">
-          <h2 class="section-title">Четыре простых шага для быстрого старта</h2>
-          <p class="four-steps__description">
+          <h2 class="section-title" data-aos="fade" data-aos-duration="1000">Четыре простых шага для быстрого старта
+          </h2>
+          <p class="four-steps__description" data-aos="fade" data-aos-duration="1000">
             Начните прямо сейчас! Подготовка не&nbsp;отнимет у&nbsp;вас много времени, а&nbsp;результат
             не&nbsp;заставит
             себя долго ждать!
           </p>
-          <div class="four-steps__steps">
+          <div class="four-steps__steps" data-aos="fade" data-aos-duration="1000">
 
-            <!-- Пройденный шаг -->
-            <div class="four-steps__step done">
+            <div class="four-steps__step active" id="step1">
               <div class="four-steps__step-icon">
                 <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -533,8 +699,7 @@
               <span>Шаг 1</span>
             </div>
 
-            <!-- Активный шаг -->
-            <div class="four-steps__step active">
+            <div class="four-steps__step" id="step2">
               <div class="four-steps__step-icon">
                 <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -545,7 +710,7 @@
               <span>Шаг 2</span>
             </div>
 
-            <div class="four-steps__step">
+            <div class="four-steps__step" id="step3">
               <div class="four-steps__step-icon">
                 <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -556,7 +721,7 @@
               <span>Шаг 3</span>
             </div>
 
-            <div class="four-steps__step">
+            <div class="four-steps__step" id="step4">
               <div class="four-steps__step-icon">
                 <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -568,303 +733,447 @@
             </div>
           </div>
 
-          <div class="four-steps__slide" id="step1">
-            <div class="four-steps__slide-text">
-              <span class="four-steps__slide-number">1</span>
-              <h3 class="four-steps__slide-title">Создайте виджет</h3>
-              <p class="four-steps__slide-description">
-                Текст-описание максимально кратко
-                о&nbsp;том, как это можно сделать
-              </p>
-              <button class="btn big">Подключить пробный 14-дневный период</button>
-              <div class="four-steps__slide-setup-widget">
+          <div class="four-steps__slides-container" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">
+            <div class="four-steps__slide active" id="step1Slide">
+              <div class="four-steps__slide-text">
+                <span class="four-steps__slide-number">1</span>
+                <h3 class="four-steps__slide-title">Создайте виджет</h3>
+                <p class="four-steps__slide-description">
+                  Текст-описание максимально кратко
+                  о&nbsp;том, как это можно сделать
+                </p>
+                <button class="btn big request-button">Подключить пробный 14-дневный период</button>
+                <div class="four-steps__slide-setup-widget">
+                  <picture>
+                    <source srcset="./images/main/four-steps/key.png, ./images/main/four-steps/key@2x.png">
+                    <img src="./images/main/four-steps/key.png" alt="">
+                  </picture>
+                  <span>Установить виджет <strong>«под ключ»</strong></span>
+                </div>
+              </div>
+              <div class="four-steps__slide-image">
                 <picture>
-                  <source srcset="./images/main/four-steps/key.png, ./images/main/four-steps/key@2x.png">
-                  <img src="./images/main/four-steps/key.png" alt="">
+                  <source
+                    srcset="./images/main/four-steps/step-1/popup.webp, ./images/main/four-steps/step-1/popup@2x.webp"
+                    type="image/webp">
+                  <source
+                    srcset="./images/main/four-steps/step-1/popup.jpg, ./images/main/four-steps/step-1/popup@2x.jpg"
+                    type="image/jpg">
+                  <img class="popup" src="./images/main/four-steps/step-1/popup.jpg" alt="">
                 </picture>
-                <span>Установить виджет <strong>«под ключ»</strong></span>
+                <picture>
+                  <source
+                    srcset="./images/main/four-steps/step-1/dashboard.webp, ./images/main/four-steps/step-1/dashboard@2x.webp"
+                    type="image/webp">
+                  <source
+                    srcset="./images/main/four-steps/step-1/dashboard.jpg, ./images/main/four-steps/step-1/dashboard@2x.jpg"
+                    type="image/jpg">
+                  <img class="dashboard" src="./images/main/four-steps/step-1/dashboard.jpg" alt="">
+                </picture>
               </div>
             </div>
-            <div class="four-steps__slide-image">
-              <img src="./images/main/four-steps/dashboard.jpg" alt="">
+
+            <div class="four-steps__slide" id="step2Slide">
+              <div class="four-steps__slide-text">
+                <span class="four-steps__slide-number">2</span>
+                <h3 class="four-steps__slide-title">Создайте веб-сторис</h3>
+                <p class="four-steps__slide-description">
+                  Текст-описание максимально кратко
+                  о&nbsp;том, как это можно сделать
+                </p>
+                <button class="btn big request-button">Подключить пробный 14-дневный период</button>
+                <div class="four-steps__slide-setup-widget">
+                  <picture>
+                    <source srcset="./images/main/four-steps/key.png, ./images/main/four-steps/key@2x.png">
+                    <img src="./images/main/four-steps/key.png" alt="">
+                  </picture>
+                  <span>Установить виджет <strong>«под ключ»</strong></span>
+                </div>
+              </div>
+              <div class="four-steps__slide-image">
+                <picture>
+                  <source
+                    srcset="./images/main/four-steps/step-2/popup-step-2.webp, ./images/main/four-steps/step-2/popup-step-2@2x.webp 2x"
+                    type="image/webp">
+                  <source
+                    srcset="./images/main/four-steps/step-2/popup-step-2.jpg, ./images/main/four-steps/step-2/popup-step-2@2x.jpg 2x"
+                    type="image/jpg">
+                  <img class="popup-step-2" src="./images/main/four-steps/step-2/popup-step-2.jpg" alt="">
+                </picture>
+                <picture>
+                  <source
+                    srcset="./images/main/four-steps/step-2/dashboard.webp, ./images/main/four-steps/step-2/dashboard@2x.webp"
+                    type="image/webp">
+                  <source
+                    srcset="./images/main/four-steps/step-2/dashboard.jpg, ./images/main/four-steps/step-2/dashboard@2x.jpg"
+                    type="image/jpg">
+                  <img class="dashboard" src="./images/main/four-steps/step-2/dashboard.jpg" alt="">
+                </picture>
+              </div>
+            </div>
+
+            <div class="four-steps__slide" id="step3Slide">
+              <div class="four-steps__slide-text">
+                <span class="four-steps__slide-number">3</span>
+                <h3 class="four-steps__slide-title">Добавьте веб-сторис к&nbsp;вашему виджету</h3>
+                <p class="four-steps__slide-description">
+                  Текст-описание максимально кратко
+                  о&nbsp;том, как это можно сделать
+                </p>
+                <button class="btn big request-button">Подключить пробный 14-дневный период</button>
+                <div class="four-steps__slide-setup-widget">
+                  <picture>
+                    <source srcset="./images/main/four-steps/key.png, ./images/main/four-steps/key@2x.png">
+                    <img src="./images/main/four-steps/key.png" alt="">
+                  </picture>
+                  <span>Установить виджет <strong>«под ключ»</strong></span>
+                </div>
+              </div>
+              <div class="four-steps__slide-image">
+                <picture>
+                  <source
+                    srcset="./images/main/four-steps/step-3/popup-slide-3.webp, ./images/main/four-steps/step-3/popup-slide-3@2x.webp 2x"
+                    type="image/webp">
+                  <source
+                    srcset="./images/main/four-steps/step-3/popup-slide-3.jpg, ./images/main/four-steps/step-3/popup-slide-3@2x.jpg 2x"
+                    type="image/jpg">
+                  <img class="popup-step-3" src="./images/main/four-steps/step-3/popup-slide-3.jpg" alt="">
+                </picture>
+                <picture>
+                  <source
+                    srcset="./images/main/four-steps/step-3/dashboard.webp, ./images/main/four-steps/step-3/dashboard@2x.webp"
+                    type="image/webp">
+                  <source
+                    srcset="./images/main/four-steps/step-3/dashboard.jpg, ./images/main/four-steps/step-3/dashboard@2x.jpg"
+                    type="image/jpg">
+                  <img class="dashboard" src="./images/main/four-steps/step-3/dashboard.jpg" alt="">
+                </picture>
+              </div>
+            </div>
+
+            <div class="four-steps__slide" id="step4Slide">
+              <div class="four-steps__slide-text">
+                <span class="four-steps__slide-number">4</span>
+                <h3 class="four-steps__slide-title">Опубликуйте ваш виджет на&nbsp;сайте</h3>
+                <p class="four-steps__slide-description">
+                  Текст-описание максимально кратко
+                  о&nbsp;том, как это можно сделать
+                </p>
+                <button class="btn big request-button">Подключить пробный 14-дневный период</button>
+                <div class="four-steps__slide-setup-widget">
+                  <picture>
+                    <source srcset="./images/main/four-steps/key.png, ./images/main/four-steps/key@2x.png">
+                    <img src="./images/main/four-steps/key.png" alt="">
+                  </picture>
+                  <span>Установить виджет <strong>«под ключ»</strong></span>
+                </div>
+              </div>
+              <div class="four-steps__slide-image">
+                <div class="popup-confirm">
+                  <img src="./images/main/four-steps/step-4/confirm-text.svg" width="130" height="10" alt="">
+                </div>
+                <picture>
+                  <source
+                    srcset="./images/main/four-steps/step-4/popup-step-4.webp, ./images/main/four-steps/step-4/popup-step-4@2x.webp"
+                    type="image/webp">
+                  <source
+                    srcset="./images/main/four-steps/step-4/popup-step-4.jpg, ./images/main/four-steps/step-4/popup-step-4@2x.jpg"
+                    type="image/jpg">
+                  <img class="popup-step-4" src="./images/main/four-steps/step-4/popup-step-4.jpg" alt="">
+                </picture>
+                <picture>
+                  <source
+                    srcset="./images/main/four-steps/step-4/dashboard.webp, ./images/main/four-steps/step-4/dashboard@2x.webp"
+                    type="image/webp">
+                  <source
+                    srcset="./images/main/four-steps/step-4/dashboard.jpg, ./images/main/four-steps/step-4/dashboard@2x.jpg"
+                    type="image/jpg">
+                  <img class="dashboard" src="./images/main/four-steps/step-4/dashboard.jpg" alt="">
+                </picture>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- SECTION 9: Фичи -->
       <section class="features">
         <div class="wrap">
-          <h2 class="features__title">
+          <h2 class="features__title" data-aos="fade" data-aos-duration="1000">
             Мы постоянно дорабатываем продукт на&nbsp;основе отзывов от&nbsp;наших клиентов. Каждый месяц
             мы&nbsp;выпускаем
             новые функции, чтобы вы зарабатывали больше и&nbsp;выгодно выделялись на&nbsp;фоне конкурентов!
           </h2>
-          <div class="features__tabs">
+          <div class="features__tabs" data-aos="fade" data-aos-duration="1000" data-aos-delay="500">
             <a class="features__tab active" id="customizationTab">Кастомизация</a>
-            <a class="features__tab" id="analyticsTab" href="">Аналитика</a>
-            <a class="features__tab" id="convertationTab" href="">Элементы&nbsp;конвертации</a>
-            <a class="features__tab" id="mobileTab" href="">Android&nbsp;&&nbsp;iOS</a>
-            <a class="features__tab" id="personalizationTab" href="">Персонализация</a>
+            <a class="features__tab" id="analyticsTab">Аналитика</a>
+            <a class="features__tab" id="convertationTab">Элементы&nbsp;конвертации</a>
+            <a class="features__tab" id="mobileTab">Android&nbsp;&&nbsp;iOS</a>
+            <a class="features__tab" id="personalizationTab">Персонализация</a>
           </div>
 
-          <!-- Tab 1 -->
-          <div class="features__tab-content" id="customizationTabContent">
-            <div class="features__tab-image">
-              <div class="t-icon">
-                <img src="./images/main/features/tab-1/t.svg" alt="">
+          <div class="features__tabs-container" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">
+            <!-- Tab 1 -->
+            <div class="features__tab-content active" id="customizationTabContent">
+              <div class="features__tab-image">
+                <div class="t-icon">
+                  <img src="./images/main/features/tab-1/t.svg" alt="">
+                </div>
+                <div class="roboto">
+                  <img src="./images/main/features/tab-1/roboto.svg" alt="">
+                </div>
+                <div class="circles">
+                  <img src="./images/main/features/tab-1/circles.svg" alt="">
+                </div>
               </div>
-              <div class="roboto">
-                <img src="./images/main/features/tab-1/roboto.svg" alt="">
-              </div>
-              <div class="circles">
-                <img src="./images/main/features/tab-1/circles.svg" alt="">
-              </div>
-            </div>
 
-            <div class="features__tab-text-block">
-              <h3 class="features__list-title">Вы можете настроить:</h3>
-              <ul class="features__list">
-                <li class="features__list-item">
-                  <div class="features__list-item-image">
-                    <img src="./images/main/features/tab-1/size-icon.svg" alt="">
-                  </div>
-                  <span>Размер и&nbsp;количество хайлайтов</span>
-                </li>
-                <li class="features__list-item">
-                  <div class="features__list-item-image">
-                    <img src="./images/main/features/tab-1/highlight-form-icon.svg" alt="">
-                  </div>
-                  <span>Форму хайлайтов</span>
-                </li>
-                <li class="features__list-item">
-                  <div class="features__list-item-image">
-                    <img src="./images/main/features/tab-1/color-icon.svg" alt="">
-                  </div>
-                  <span>Цвет для обложки и&nbsp;обводки хайлайтов</span>
-                </li>
-                <li class="features__list-item">
-                  <div class="features__list-item-image">
-                    <img src="./images/main/features/tab-1/captions-icon.svg" alt="">
-                  </div>
-                  <span>Подписи для хайлайтов</span>
-                </li>
-                <li class="features__list-item">
-                  <div class="features__list-item-image">
-                    <img src="./images/main/features/tab-1/customization-icon.svg" alt="">
-                  </div>
-                  <span>Любая кастомизация по&nbsp;вашему запросу</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Tab 2 -->
-          <div class="features__tab-content" id="analyticsTabContent" style="display: none;">
-            <div class="features__tab-image">
-              <div class="diagram">
-                <img src="./images/main/features/tab-2/diagram.svg" alt="">
+              <div class="features__tab-text-block">
+                <h3 class="features__list-title">Вы можете настроить:</h3>
+                <ul class="features__list">
+                  <li class="features__list-item">
+                    <div class="features__list-item-image">
+                      <img src="./images/main/features/tab-1/size-icon.svg" alt="">
+                    </div>
+                    <span>Размер и&nbsp;количество хайлайтов</span>
+                  </li>
+                  <li class="features__list-item">
+                    <div class="features__list-item-image">
+                      <img src="./images/main/features/tab-1/highlight-form-icon.svg" alt="">
+                    </div>
+                    <span>Форму хайлайтов</span>
+                  </li>
+                  <li class="features__list-item">
+                    <div class="features__list-item-image">
+                      <img src="./images/main/features/tab-1/color-icon.svg" alt="">
+                    </div>
+                    <span>Цвет для обложки и&nbsp;обводки хайлайтов</span>
+                  </li>
+                  <li class="features__list-item">
+                    <div class="features__list-item-image">
+                      <img src="./images/main/features/tab-1/captions-icon.svg" alt="">
+                    </div>
+                    <span>Подписи для хайлайтов</span>
+                  </li>
+                  <li class="features__list-item">
+                    <div class="features__list-item-image">
+                      <img src="./images/main/features/tab-1/customization-icon.svg" alt="">
+                    </div>
+                    <span>Любая кастомизация по&nbsp;вашему запросу</span>
+                  </li>
+                </ul>
               </div>
             </div>
 
-            <div class="features__tab-text-block">
-              <ul class="features__list">
-                <li class="features__list-item">
-                  <div class="features__list-item-image">
-                    <img src="./images/main/features/tab-2/target.svg" alt="">
-                  </div>
-                  <span>
-                    Отслеживайте просмотры
-                    виджета и&nbsp;веб-сторис
-                  </span>
-                </li>
-                <li class="features__list-item">
-                  <div class="features__list-item-image">
-                    <img src="./images/main/features/tab-2/tracking.svg" alt="">
-                  </div>
-                  <span>
-                    Используйте UTM метки,
-                    если покупаете мобильный
-                    трафик на&nbsp;веб-сторис
-                  </span>
-                </li>
-                <li class="features__list-item">
-                  <div class="features__list-item-image">
-                    <img src="./images/main/features/tab-2/target.svg" alt="">
-                  </div>
-                  <span>
-                    Получайте данные
-                    из&nbsp;интерактивов
-                    (опросы, квизы)
-                  </span>
-                </li>
-                <li class="features__list-item">
-                  <div class="features__list-item-image">
-                    <img src="./images/main/features/tab-2/analytics.svg" alt="">
-                  </div>
-                  <span>
-                    Используйте Google Analytics
-                    при создании веб-сторис в&nbsp;нашем
-                    конструкторе
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Tab 3 -->
-          <div class="features__tab-content" id="convertationTabContent" style="display: none;">
-            <div class="features__tab-image">
-              <img class="yes-no" src="./images/main/features/tab-3/yes-no.svg" alt="">
-              <div class="smiles">
-                <span>🤝</span>
-                <span>😍</span>
-                <span>🎅</span>
-                <span>👿</span>
-                <span>🤗</span>
+            <!-- Tab 2 -->
+            <div class="features__tab-content" id="analyticsTabContent">
+              <div class="features__tab-image">
+                <div class="diagram">
+                  <img src="./images/main/features/tab-2/diagram.svg" alt="">
+                </div>
               </div>
-              <picture>
-                <source srcset="./images/main/features/tab-3/man.jpg, ./images/main/features/tab-3/man@2x.jpg 2x">
-                <img class="man" src="./images/main/features/tab-3/man.jpg" alt="">
-              </picture>
+
+              <div class="features__tab-text-block">
+                <ul class="features__list">
+                  <li class="features__list-item">
+                    <div class="features__list-item-image">
+                      <img src="./images/main/features/tab-2/target.svg" alt="">
+                    </div>
+                    <span>
+                      Отслеживайте просмотры
+                      виджета и&nbsp;веб-сторис
+                    </span>
+                  </li>
+                  <li class="features__list-item">
+                    <div class="features__list-item-image">
+                      <img src="./images/main/features/tab-2/tracking.svg" alt="">
+                    </div>
+                    <span>
+                      Используйте UTM метки,
+                      если покупаете мобильный
+                      трафик на&nbsp;веб-сторис
+                    </span>
+                  </li>
+                  <li class="features__list-item">
+                    <div class="features__list-item-image">
+                      <img src="./images/main/features/tab-2/target.svg" alt="">
+                    </div>
+                    <span>
+                      Получайте данные
+                      из&nbsp;интерактивов
+                      (опросы, квизы)
+                    </span>
+                  </li>
+                  <li class="features__list-item">
+                    <div class="features__list-item-image">
+                      <img src="./images/main/features/tab-2/analytics.svg" alt="">
+                    </div>
+                    <span>
+                      Используйте Google Analytics
+                      при создании веб-сторис в&nbsp;нашем
+                      конструкторе
+                    </span>
+                  </li>
+                </ul>
+              </div>
             </div>
 
-            <div class="features__tab-text-block">
-              <h3 class="features__list-title">
-                Мы предоставляем многофункциональный конструктор,
-                в&nbsp;котором вы можете создать конверсионную веб-сторис
-                с&nbsp;практически любым типом контента:
-              </h3>
-              <ul class="features__list">
-                <li class="features__list-item">
-                  <div class="features__list-item-image">
-                    <img src="./images/main/features/tab-2/target.svg" alt="">
-                  </div>
-                  <span>
-                    Фото
-                  </span>
-                </li>
-                <li class="features__list-item">
-                  <div class="features__list-item-image">
-                    <img src="./images/main/features/tab-2/tracking.svg" alt="">
-                  </div>
-                  <span>
-                    Видео
-                  </span>
-                </li>
-                <li class="features__list-item">
-                  <div class="features__list-item-image">
-                    <img src="./images/main/features/tab-2/target.svg" alt="">
-                  </div>
-                  <span>
-                    Опросы
-                  </span>
-                </li>
-                <li class="features__list-item">
-                  <div class="features__list-item-image">
-                    <img src="./images/main/features/tab-2/analytics.svg" alt="">
-                  </div>
-                  <span>
-                    Игры
-                  </span>
-                </li>
-                <li class="features__list-item">
-                  <div class="features__list-item-image">
-                    <img src="./images/main/features/tab-2/analytics.svg" alt="">
-                  </div>
-                  <span>
-                    Чатботы
-                  </span>
-                </li>
-                <li class="features__list-item">
-                  <div class="features__list-item-image">
-                    <img src="./images/main/features/tab-2/analytics.svg" alt="">
-                  </div>
-                  <span>
-                    Готовые сторис из Instagram
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </div>
+            <!-- Tab 3 -->
+            <div class="features__tab-content" id="convertationTabContent">
+              <div class="features__tab-image">
+                <img class="yes-no" src="./images/main/features/tab-3/yes-no.svg" alt="">
+                <div class="smiles">
+                  <span>🤝</span>
+                  <span>😍</span>
+                  <span>🎅</span>
+                  <span>👿</span>
+                  <span>🤗</span>
+                </div>
+                <picture>
+                  <source srcset="./images/main/features/tab-3/man.jpg, ./images/main/features/tab-3/man@2x.jpg 2x">
+                  <img class="man" src="./images/main/features/tab-3/man.jpg" alt="">
+                </picture>
+              </div>
 
-          <!-- Tab 4 -->
-          <div class="features__tab-content" id="mobileTabContent" style="display: none;">
-            <div class="features__tab-image">
-              <picture>
-                <source srcset="./images/main/features/tab-4/man.jpg, ./images/main/features/tab-4/man@2x.jpg 2x">
-                <img class="man" src="./images/main/features/tab-4/man.jpg" alt="">
-              </picture>
-            </div>
-
-            <div class="features__tab-text-block">
-              <ul class="features__list">
-                <li class="features__list-item">
-                  <div class="features__list-item-image">
-                    <img src="./images/main/features/tab-4/ios.svg" alt="">
-                  </div>
-                  <span>
-                    SDK для установки виджета
-                    в&nbsp;приложение на&nbsp;платформе iOS
-                  </span>
-                </li>
-                <li class="features__list-item">
-                  <div class="features__list-item-image">
-                    <img src="./images/main/features/tab-4/sdk.svg" alt="">
-                  </div>
-                  <span>
-                    SDK для установки виджета
-                    в&nbsp;приложение на&nbsp;платформе Android
-                  </span>
-                </li>
-              </ul>
-              <ul class="features__links-list">
-                <li><a href="">Инструкция по интеграции SDK для iOS</a></li>
-                <li><a href="">Инструкция по интеграции SDK для Android</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Tab 5 -->
-          <div class="features__tab-content" id="personalizationTabContent" style="display: none;">
-            <div class="features__tab-image">
-              <picture>
-                <source srcset="./images/main/features/tab-5/woman.jpg, ./images/main/features/tab-5/woman@2x.jpg 2x">
-                <img class="woman" src="./images/main/features/tab-5/woman.jpg" alt="">
-              </picture>
+              <div class="features__tab-text-block">
+                <h3 class="features__list-title">
+                  Мы предоставляем многофункциональный конструктор,
+                  в&nbsp;котором вы можете создать конверсионную веб-сторис
+                  с&nbsp;практически любым типом контента:
+                </h3>
+                <ul class="features__list">
+                  <li class="features__list-item">
+                    <div class="features__list-item-image">
+                      <img src="./images/main/features/tab-2/target.svg" alt="">
+                    </div>
+                    <span>
+                      Фото
+                    </span>
+                  </li>
+                  <li class="features__list-item">
+                    <div class="features__list-item-image">
+                      <img src="./images/main/features/tab-2/tracking.svg" alt="">
+                    </div>
+                    <span>
+                      Видео
+                    </span>
+                  </li>
+                  <li class="features__list-item">
+                    <div class="features__list-item-image">
+                      <img src="./images/main/features/tab-2/target.svg" alt="">
+                    </div>
+                    <span>
+                      Опросы
+                    </span>
+                  </li>
+                  <li class="features__list-item">
+                    <div class="features__list-item-image">
+                      <img src="./images/main/features/tab-2/analytics.svg" alt="">
+                    </div>
+                    <span>
+                      Игры
+                    </span>
+                  </li>
+                  <li class="features__list-item">
+                    <div class="features__list-item-image">
+                      <img src="./images/main/features/tab-2/analytics.svg" alt="">
+                    </div>
+                    <span>
+                      Чатботы
+                    </span>
+                  </li>
+                  <li class="features__list-item">
+                    <div class="features__list-item-image">
+                      <img src="./images/main/features/tab-2/analytics.svg" alt="">
+                    </div>
+                    <span>
+                      Готовые сторис из Instagram
+                    </span>
+                  </li>
+                </ul>
+              </div>
             </div>
 
-            <div class="features__tab-text-block">
-              <ul class="features__list">
-                <li class="features__list-item">
-                  <div class="features__list-item-image">
-                    <img src="./images/main/features/tab-5/tag.svg" alt="">
-                  </div>
-                  <span>
-                    Создавайте аудитории по&nbsp;тегам
-                    и&nbsp;показывайте им&nbsp;только релевантные
-                    веб-сторис в&nbsp;виджете
-                  </span>
-                </li>
-                <li class="features__list-item">
-                  <div class="features__list-item-image">
-                    <img src="./images/main/features/tab-5/email.svg" alt="">
-                  </div>
-                  <span>
-                    Указывайте имя или почту ваших
-                    пользователей при обращении к&nbsp;ним
-                    в&nbsp;веб-сторис, как в&nbsp;email рассылках
-                  </span>
-                </li>
-              </ul>
+            <!-- Tab 4 -->
+            <div class="features__tab-content" id="mobileTabContent">
+              <div class="features__tab-image">
+                <picture>
+                  <source srcset="./images/main/features/tab-4/man.jpg, ./images/main/features/tab-4/man@2x.jpg 2x">
+                  <img class="man" src="./images/main/features/tab-4/man.jpg" alt="">
+                </picture>
+              </div>
+
+              <div class="features__tab-text-block">
+                <ul class="features__list">
+                  <li class="features__list-item">
+                    <div class="features__list-item-image">
+                      <img src="./images/main/features/tab-4/ios.svg" alt="">
+                    </div>
+                    <span>
+                      SDK для установки виджета
+                      в&nbsp;приложение на&nbsp;платформе iOS
+                    </span>
+                  </li>
+                  <li class="features__list-item">
+                    <div class="features__list-item-image">
+                      <img src="./images/main/features/tab-4/sdk.svg" alt="">
+                    </div>
+                    <span>
+                      SDK для установки виджета
+                      в&nbsp;приложение на&nbsp;платформе Android
+                    </span>
+                  </li>
+                </ul>
+                <ul class="features__links-list">
+                  <li><a href="">Инструкция по интеграции SDK для iOS</a></li>
+                  <li><a href="">Инструкция по интеграции SDK для Android</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Tab 5 -->
+            <div class="features__tab-content" id="personalizationTabContent">
+              <div class="features__tab-image">
+                <picture>
+                  <source srcset="./images/main/features/tab-5/woman.jpg, ./images/main/features/tab-5/woman@2x.jpg 2x">
+                  <img class="woman" src="./images/main/features/tab-5/woman.jpg" alt="">
+                </picture>
+              </div>
+
+              <div class="features__tab-text-block">
+                <ul class="features__list">
+                  <li class="features__list-item">
+                    <div class="features__list-item-image">
+                      <img src="./images/main/features/tab-5/tag.svg" alt="">
+                    </div>
+                    <span>
+                      Создавайте аудитории по&nbsp;тегам
+                      и&nbsp;показывайте им&nbsp;только релевантные
+                      веб-сторис в&nbsp;виджете
+                    </span>
+                  </li>
+                  <li class="features__list-item">
+                    <div class="features__list-item-image">
+                      <img src="./images/main/features/tab-5/email.svg" alt="">
+                    </div>
+                    <span>
+                      Указывайте имя или почту ваших
+                      пользователей при обращении к&nbsp;ним
+                      в&nbsp;веб-сторис, как в&nbsp;email рассылках
+                    </span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="tariffs">
+      <!-- SECTION 10: Тарифы -->
+      <section class="tariffs" id="tariffs">
         <div class="wrap">
           <h2 class="section-title">Тарифы</h2>
-          <p class="tariffs__description">Инвестиции в развитие, которые окупают себя в кратчайшие сроки!</p>
+          <p class="tariffs__description">Инвестиции в развитие, которые
+            окупают себя в кратчайшие сроки!</p>
           <div class="tariffs__switch-block">
             <span class="tariffs__switch-block-discount">Скидка&nbsp;10%</span>
             <label class="switch">
@@ -878,7 +1187,7 @@
           <div class="tariffs__table">
             <div class="tariffs__table-content">
               <div class="tariffs__table-left-column">
-                <div class="tariffs__help">
+                <div class="tariffs__help" data-aos="fade" data-aos-duration="1000">
                   <img src="./images/main/tariffs/sphere.svg" alt="">
                   <h3 class="tariffs__help-title">Затрудняетесь в&nbsp;выборе?</h3>
                   <p class="tariffs__help-description">Напишите нам, мы&nbsp;поможем выбрать
@@ -911,7 +1220,7 @@
                 </ul>
               </div>
 
-              <div class="tariffs__tariff-item trial">
+              <div class="tariffs__tariff-item trial" data-aos="fade" data-aos-duration="800" data-aos-delay="200">
                 <div class="tariffs__tariff-title-block">
                   <h3 class="tariffs__tariff-title">Trial</h3>
                   <p class="tariffs__tariff-description">
@@ -923,7 +1232,7 @@
                 </div>
                 <div class="tariffs__tariff-features-block">
                   <span class="tariffs__tariff-price">Бесплатно</span>
-                  <button class="btn-outlined small green">Подключить</button>
+                  <button class="btn-outlined small green request-button">Подключить</button>
                   <ul class="tariffs__features-list">
                     <li>
                       <span class="tariffs__features-list-name">Просмотры
@@ -962,7 +1271,8 @@
                 </div>
               </div>
 
-              <div class="tariffs__tariff-item business">
+              <div class="tariffs__tariff-item business" data-aos="fade-up" data-aos-duration="800"
+                data-aos-delay="400">
                 <div class="tariffs__tariff-item-header">
                   <span>
                     Большинство компаний<br>
@@ -979,7 +1289,7 @@
                 </div>
                 <div class="tariffs__tariff-features-block">
                   <span class="tariffs__tariff-price">4 490 ₽<span>/мес.</span></span>
-                  <button class="btn small green">Подключить</button>
+                  <button class="btn small green request-button">Подключить</button>
                   <ul class="tariffs__features-list">
                     <li>
                       <span class="tariffs__features-list-name">Просмотры
@@ -1018,7 +1328,7 @@
                 </div>
               </div>
 
-              <div class="tariffs__tariff-item premium">
+              <div class="tariffs__tariff-item premium" data-aos="fade" data-aos-duration="800" data-aos-delay="200">
                 <div class="tariffs__tariff-title-block">
                   <h3 class="tariffs__tariff-title">Premium</h3>
                   <p class="tariffs__tariff-description">
@@ -1029,7 +1339,7 @@
                 </div>
                 <div class="tariffs__tariff-features-block">
                   <span class="tariffs__tariff-price">8 990 ₽<span>/мес.</span></span>
-                  <button class="btn-outlined small green">Подключить</button>
+                  <button class="btn-outlined small green request-button">Подключить</button>
                   <ul class="tariffs__features-list">
                     <li>
                       <span class="tariffs__features-list-name">Просмотры
@@ -1078,11 +1388,12 @@
         </div>
       </section>
 
+      <!-- SECTION 11: Дополнительные услуги -->
       <section class="additional-services">
         <div class="wrap">
           <h2 class="section-title">Дополнительные услуги</h2>
           <div class="additional-services__container">
-            <div class="additional-services__maintaining">
+            <div class="additional-services__maintaining" data-aos="fade" data-aos-duration="1000" data-aos-delay="100">
               <h3 class="additional-services__title">Ведение виджета</h3>
               <p class="additional-services__description">Наша команда создаст веб-сторис и&nbsp;будет
                 обновлять контент.
@@ -1099,7 +1410,7 @@
                 <img class="woman" src="./images/main/additional-services/woman.jpg" alt="">
               </picture>
             </div>
-            <div class="additional-services__creation">
+            <div class="additional-services__creation" data-aos="fade" data-aos-duration="1000" data-aos-delay="300">
               <div>
                 <h3 class="additional-services__title">
                   Создание и&nbsp;наполнение
@@ -1156,7 +1467,8 @@
         </div>
       </section>
 
-      <section class="setup-by-command">
+      <!-- SECTION 12: Наша команда поможет -->
+      <section class="setup-by-command" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
         <div class="wrap">
           <h2 class="section-title centered">
             Наша команда настроит
@@ -1166,12 +1478,13 @@
           <p>
             <strong>Звучит интересно?</strong> Мы расскажем подробнее:
           </p>
-          <button class="btn big">Установите мне виджет</button>
+          <button class="btn big request-button">Установите мне виджет</button>
         </div>
       </section>
 
+      <!-- SECTION 13: Поддержка CMS -->
       <section class="cms">
-        <div class="wrap">
+        <div class="wrap" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
           <h2 class="section-title white centered">
             Webstoryz виджет работает
             с&nbsp;популярными CMS
@@ -1191,6 +1504,7 @@
         </div>
       </section>
 
+      <!-- SECTION 14: Приятный бонус -->
       <section class="bonus">
         <div class="wrap">
           <div class="bonus__text-block">
@@ -1209,14 +1523,19 @@
             </ul>
           </div>
           <div class="bonus__chat">
-            <img src="./images/main/bonus/chat/01.svg" alt="">
-            <img src="./images/main/bonus/chat/02.svg" alt="">
-            <img src="./images/main/bonus/chat/03.svg" alt="">
-            <img src="./images/main/bonus/chat/04.svg" alt="">
+            <img src="./images/main/bonus/chat/01.svg" alt="" data-aos="fade-right" data-aos-duration="800"
+              data-aos-delay="100">
+            <img src="./images/main/bonus/chat/02.svg" alt="" data-aos="fade-left" data-aos-duration="800"
+              data-aos-delay="300">
+            <img src="./images/main/bonus/chat/03.svg" alt="" data-aos="fade-right" data-aos-duration="800"
+              data-aos-delay="500">
+            <img src="./images/main/bonus/chat/04.svg" alt="" data-aos="fade-left" data-aos-duration="800"
+              data-aos-delay="700">
           </div>
         </div>
       </section>
 
+      <!-- SECTION 15: Примеры реализации -->
       <section class="examples">
         <div class="wrap">
           <div class="examples__left-column">
@@ -1232,94 +1551,207 @@
               самостоятельно и&nbsp;добавить в&nbsp;виджет.
             </p>
             <div class="examples__pagination-block">
-              <p class="examples__current-slide-number">01/<span>08</span></p>
-              <img src="./images/main/examples/pagination.svg" alt="">
+              <p class="examples__current-slide-number">
+                <span class="slide-current">01</span>/<span class="slides-total"></span>
+              </p>
+              <div class="examples__pagination swiper-container swiper-left">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination pagination-dots examples__pagination-dots"></div>
+                <div class="swiper-button-next"></div>
+              </div>
             </div>
-            <button class="btn big">Хочу&nbsp;так&nbsp;же!</button>
+            <button class="btn big request-button">Хочу&nbsp;так&nbsp;же!</button>
           </div>
-          <div class="examples__image">
-            <picture>
-              <source srcset="./images/main/examples/image.jpg, ./images/main/examples/image@2x.jpg 2x">
-              <img src="./images/main/examples/image.jpg" alt="">
-            </picture>
+
+          <div class="examples__image swiper-container swiper-middle" data-aos="fade-up" data-aos-duration="1000"
+            data-aos-delay="300">
+            <div class="swiper-wrapper examples__image-container">
+              <div class="swiper-slide">
+                <picture>
+                  <source
+                    srcset="./images/main/examples/screens/organika/organika.webp, ./images/main/examples/screens/organika/organika@2x.webp 2x"
+                    type="image/webp">
+                  <source
+                    srcset="./images/main/examples/screens/organika/organika.png, ./images/main/examples/screens/organika/organika@2x.png 2x"
+                    type="image/png">
+                  <img src="./images/main/examples/screens/organika/organika.png" alt="Organika">
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source
+                    srcset="./images/main/examples/screens/startup-show/startup-show.webp, ./images/main/examples/screens/startup-show/startup-show@2x.webp 2x"
+                    type="image/webp">
+                  <source
+                    srcset="./images/main/examples/screens/startup-show/startup-show.png, ./images/main/examples/screens/startup-show/startup-show@2x.png 2x"
+                    type="image/png">
+                  <img src="./images/main/examples/screens/startup-show/startup-show.png" alt="Startup Show">
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source
+                    srcset="./images/main/examples/screens/foodband/foodband.webp, ./images/main/examples/screens/foodband/foodband@2x.webp 2x"
+                    type="image/webp">
+                  <source
+                    srcset="./images/main/examples/screens/foodband/foodband.png, ./images/main/examples/screens/foodband/foodband@2x.png 2x"
+                    type="image/png">
+                  <img src="./images/main/examples/screens/foodband/foodband.png" alt="Foodband">
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source
+                    srcset="./images/main/examples/screens/glaveda/glaveda.webp, ./images/main/examples/screens/glaveda/glaveda@2x.webp 2x"
+                    type="image/webp">
+                  <source
+                    srcset="./images/main/examples/screens/glaveda/glaveda.png, ./images/main/examples/screens/glaveda/glaveda@2x.png 2x"
+                    type="image/png">
+                  <img src="./images/main/examples/screens/glaveda/glaveda.png" alt="Glaveda">
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source
+                    srcset="./images/main/examples/screens/mts/mts.webp, ./images/main/examples/screens/mts/mts@2x.webp 2x"
+                    type="image/webp">
+                  <source
+                    srcset="./images/main/examples/screens/mts/mts.png, ./images/main/examples/screens/mts/mts@2x.png 2x"
+                    type="image/png">
+                  <img src="./images/main/examples/screens/mts/mts.png" alt="МТС">
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source
+                    srcset="./images/main/examples/screens/ceorooms/ceorooms.webp, ./images/main/examples/screens/ceorooms/ceorooms@2x.webp 2x"
+                    type="image/webp">
+                  <source
+                    srcset="./images/main/examples/screens/ceorooms/ceorooms.png, ./images/main/examples/screens/ceorooms/ceorooms@2x.png 2x"
+                    type="image/png">
+                  <img src="./images/main/examples/screens/ceorooms/ceorooms.png" alt="CEOROOMS">
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source
+                    srcset="./images/main/examples/screens/city/city.webp, ./images/main/examples/screens/city/city@2x.webp 2x"
+                    type="image/webp">
+                  <source
+                    srcset="./images/main/examples/screens/city/city.png, ./images/main/examples/screens/city/city@2x.png 2x"
+                    type="image/png">
+                  <img src="./images/main/examples/screens/city/city.png" alt="City">
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source
+                    srcset="./images/main/examples/screens/beauty-brands/beauty-brands.webp, ./images/main/examples/screens/beauty-brands/beauty-brands@2x.webp 2x"
+                    type="image/webp">
+                  <source
+                    srcset="./images/main/examples/screens/beauty-brands/beauty-brands.png, ./images/main/examples/screens/beauty-brands/beauty-brands@2x.png 2x"
+                    type="image/png">
+                  <img src="./images/main/examples/screens/beauty-brands/beauty-brands.png" alt="Beauty Brands">
+                </picture>
+              </div>
+            </div>
             <button class="btn-outlined medium green">Смотреть live-версию</button>
           </div>
-          <div class="examples__right-column">
-            <a class="examples__link active" href="">
-              <picture>
-                <source
-                  srcset="./images/main/examples/logos/startup-show.png, ./images/main/examples/logos/startup-show@2x.png 2x">
-                <img src="./images/main/examples/logos/startup-show.png" alt="">
-              </picture>
-              <p>
-                Веб-сторис<br>
-                <span>для StartUp Show</span>
-              </p>
-            </a>
-            <a class="examples__link" href="">
-              <picture>
-                <source srcset="./images/main/examples/logos/mgts.png, ./images/main/examples/logos/mgts@2x.png 2x">
-                <img src="./images/main/examples/logos/mgts.png" alt="">
-              </picture>
-              <p>
-                Веб-сторис<br>
-                <span>для МГТС</span>
-              </p>
-            </a>
-            <a class="examples__link" href="">
-              <picture>
-                <source
-                  srcset="./images/main/examples/logos/foodband.png, ./images/main/examples/logos/foodband@2x.png 2x">
-                <img src="./images/main/examples/logos/foodband.png" alt="">
-              </picture>
-              <p>
-                Веб-сторис<br>
-                <span>для Foodband</span>
-              </p>
-            </a>
-            <a class="examples__link" href="">
-              <img src="./images/main/examples/logos/glaveda.svg" alt="">
-              <p>
-                Веб-сторис<br>
-                <span>для ГлавЕды</span>
-              </p>
-            </a>
-            <a class="examples__link" href="">
-              <picture>
-                <source
-                  srcset="./images/main/examples/logos/organika.png, ./images/main/examples/logos/organika@2x.png 2x">
-                <img src="./images/main/examples/logos/organika.png" alt="">
-              </picture>
-              <p>
-                Веб-сторис<br>
-                <span>для Organika</span>
-              </p>
-            </a>
-            <a class="examples__link" href="">
-              <picture>
-                <source
-                  srcset="./images/main/examples/logos/ceo-rooms.png, ./images/main/examples/logos/ceo-rooms@2x.png 2x">
-                <img src="./images/main/examples/logos/ceo-rooms.png" alt="">
-              </picture>
-              <p>
-                Веб-сторис<br>
-                <span>для CEO-Rooms</span>
-              </p>
-            </a>
+
+          <div thumbsSlider="" class="examples__right-column swiper-container swiper-right">
+            <div class="examples__right-column-wrapper swiper-wrapper">
+              <div class="examples__link swiper-slide">
+                <picture>
+                  <source
+                    srcset="./images/main/examples/logos/organika.png, ./images/main/examples/logos/organika@2x.png 2x">
+                  <img src="./images/main/examples/logos/organika.png" alt="">
+                </picture>
+                <p>
+                  Веб-сторис<br>
+                  <span>для Organika</span>
+                </p>
+              </div>
+              <div class="examples__link swiper-slide">
+                <picture>
+                  <source
+                    srcset="./images/main/examples/logos/startup-show.png, ./images/main/examples/logos/startup-show@2x.png 2x">
+                  <img src="./images/main/examples/logos/startup-show.png" alt="">
+                </picture>
+                <p>
+                  Веб-сторис<br>
+                  <span>для StartUp Show</span>
+                </p>
+              </div>
+              <div class="examples__link swiper-slide">
+                <picture>
+                  <source
+                    srcset="./images/main/examples/logos/foodband.png, ./images/main/examples/logos/foodband@2x.png 2x">
+                  <img src="./images/main/examples/logos/foodband.png" alt="">
+                </picture>
+                <p>
+                  Веб-сторис<br>
+                  <span>для Foodband</span>
+                </p>
+              </div>
+              <div class="examples__link swiper-slide">
+                <img src="./images/main/examples/logos/glaveda.svg" alt="">
+                <p>
+                  Веб-сторис<br>
+                  <span>для ГлавЕды</span>
+                </p>
+              </div>
+              <div class="examples__link swiper-slide">
+                <img src="./images/main/examples/logos/mgts.svg" alt="">
+                <p>
+                  Веб-сторис<br>
+                  <span>для МГТС</span>
+                </p>
+              </div>
+              <div class="examples__link swiper-slide">
+                <picture>
+                  <source
+                    srcset="./images/main/examples/logos/ceo-rooms.png, ./images/main/examples/logos/ceo-rooms@2x.png 2x">
+                  <img src="./images/main/examples/logos/ceo-rooms.png" alt="">
+                </picture>
+                <p>
+                  Веб-сторис<br>
+                  <span>для CEO-Rooms</span>
+                </p>
+              </div>
+              <div class="examples__link swiper-slide">
+                <img src="./images/main/examples/logos/citi.svg" alt="">
+                <p>
+                  Веб-сторис<br>
+                  <span>для Citibank</span>
+                </p>
+              </div>
+              <div class="examples__link swiper-slide">
+                <picture>
+                  <source srcset="./images/main/examples/logos/mone.png, ./images/main/examples/logos/mone@2x.png 2x">
+                  <img src="./images/main/examples/logos/mone.png" alt="">
+                </picture>
+                <p>
+                  Веб-сторис<br>
+                  <span>для MONE Professional</span>
+                </p>
+              </div>
+            </div>
+            <div class="swiper-scrollbar"></div>
           </div>
-          <button class="btn big mobile">Хочу&nbsp;так&nbsp;же!</button>
+          <button class="btn big mobile request-button">Хочу&nbsp;так&nbsp;же!</button>
         </div>
       </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
-      <div class="wrap">
+      <div class="wrap" data-aos="fade" data-aos-duration="1000">
         <a href=""><img class="footer__logo" src="./images/main/header/webstoryz-logo.svg" alt=""></a>
         <div class="footer__actions">
-          <button class="btn small">Зарегистрироваться</button>
-          <button class="btn-outlined small light">Войти</button>
+          <a href="https://auth.webstoryz.com/register" target="_blank" class="btn small">Зарегистрироваться</a>
+          <a href="https://auth.webstoryz.com/login/user" target="_blank" class="btn-outlined small light">Войти</a>
         </div>
-        <a class="footer__connect" href="">Свяжитесь с нами</a>
+        <a class="footer__connect request-button">Свяжитесь с нами</a>
         <p class="footer__time">
           по&nbsp;любым вопросам в&nbsp;будни<br>
           с&nbsp;9:00 до&nbsp;20:00 по&nbsp;Московскому времени
