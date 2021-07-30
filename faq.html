@@ -43,7 +43,7 @@
             <span class="lang-select__lang-item ru">Рус</span>
             <a class="lang-select__arrow"></a>
           </button>
-          <ul class="lang-select__dropdown" style="display: none;">
+          <ul class="lang-select__dropdown">
             <li class="active">
               <span class="lang-select__lang-item ru">Рус</span>
             </li>
@@ -67,17 +67,17 @@
   <!-- -->
 
   <!-- Request popup -->
-  <div class="request-popup">
+  <div class="request-popup-individual request-popup" id="individual">
     <div class="request-popup__container">
       <h2 class="request-popup__title">Нужна консультация?</h2>
       <p class="request-popup__description">Вы&nbsp;можете написать нам прямо сейчас!</p>
       <p class="request-popup__choose-communication-type">Выберите предпочтительный способ связи:</p>
       <div class="request-popup__communication-types">
-        <a href="">
+        <a href="https://t.me/webstoryz" target="_blank">
           <img src="./images/telegram-icon.svg" width="24" height="24" alt="Телеграм">
           <span>Написать в&nbsp;Телеграм</span>
         </a>
-        <a href="">
+        <a href="https://wa.me/79955001769" target="_blank">
           <img src="./images/whatsapp-icon.svg" width="24" height="24" alt="Whatsapp">
           <span>Написать в&nbsp;Whatsapp</span>
         </a>
@@ -87,11 +87,11 @@
         связался с&nbsp;вами для обсуждения деталей:
       </p>
       <form class="request-popup__form">
-        <input type="text" placeholder="Введите ваше имя">
-        <input type="e-mail" placeholder="Введите ваш номер телефона или email">
-        <button class="btn big">Оставить заявку</button>
+        <input type="text" placeholder="Введите ваше имя" id="name">
+        <input type="text" placeholder="Введите ваш номер телефона или email*" id="contact">
+        <button class="btn big" id="submit">Оставить заявку</button>
         <label class="checkbox">
-          <input class="checkbox__input" type="checkbox" name="" id="">
+          <input class="checkbox__input" type="checkbox" id="agreement" checked>
           <span class="checkbox__view-box"></span>
           <span class="checkbox__description">
             Нажимая на&nbsp;кнопку, я&nbsp;даю согласие на&nbsp;<a href="">обработку персональных данных</a>
@@ -167,12 +167,12 @@
         <section class="faq-content">
           <h1 class="section-title">FAQ</h1>
           <p class="faq-content__description">Часто задаваемые вопросы от&nbsp;пользователей</p>
-          <div class="faq-content__tabs">
+          <!-- <div class="faq-content__tabs">
             <a class="faq-content__tab active">Виджет</a>
             <a class="faq-content__tab">Веб-сториз</a>
             <a class="faq-content__tab">Тарифы</a>
             <a class="faq-content__tab">Прочее</a>
-          </div>
+          </div> -->
 
           <div class="faq-content__tab-content">
             <h2 class="faq-content__tab-content-title">Как я&nbsp;могу интегрировать виджет на&nbsp;сайт?</h2>
@@ -192,8 +192,8 @@
             <h2 class="faq-content__tab-content-title">Могу ли&nbsp;я&nbsp;перенести сторис / «актуальное» из&nbsp;моей
               страницы в&nbsp;Инстаграм?</h2>
             <p>
-              Для того, чтобы разместить виджет на&nbsp;вашем сайте, нужно вставить html-код, который вы&nbsp;получите
-              после cоздания виджета.
+              Вы можете перенести сторис из&nbsp;вашего Инстаграм аккаунта, привязав ваш акканут к&nbsp;личному кабинету
+              WebStoryz.
             </p>
             <a class="faq-content__tab-content-close">
               <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -207,8 +207,8 @@
             <h2 class="faq-content__tab-content-title">Могу ли&nbsp;я&nbsp;добавить виджет на&nbsp;любой сайт? Есть
               ли&nbsp;какие-то ограничения?</h2>
             <p>
-              Для того, чтобы разместить виджет на&nbsp;вашем сайте, нужно вставить html-код, который вы&nbsp;получите
-              после cоздания виджета.
+              Виджет может быть интегрирован на&nbsp;любой сайт, просто скопируйте html-код на&nbsp;страницу нужно вам
+              сайта.
             </p>
             <a class="faq-content__tab-content-close">
               <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -221,8 +221,8 @@
           <div class="faq-content__tab-content">
             <h2 class="faq-content__tab-content-title">Могу ли&nbsp;я&nbsp;поменять тариф?</h2>
             <p>
-              Для того, чтобы разместить виджет на&nbsp;вашем сайте, нужно вставить html-код, который вы&nbsp;получите
-              после cоздания виджета.
+              Вы можете поменять тарифный план в&nbsp;любое время в&nbsp;разделе «Тарифный план». Новый тарифный план
+              начнет действовать с&nbsp;нового календарного месяца.
             </p>
             <a class="faq-content__tab-content-close">
               <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -235,8 +235,7 @@
           <div class="faq-content__tab-content">
             <h2 class="faq-content__tab-content-title">Могу ли&nbsp;я&nbsp;посмотреть статистику по&nbsp;виджету?</h2>
             <p>
-              Для того, чтобы разместить виджет на&nbsp;вашем сайте, нужно вставить html-код, который вы&nbsp;получите
-              после cоздания виджета.
+              Статистика по&nbsp;вашему виджету доступна во&nbsp;вкладке «Статистика».
             </p>
             <a class="faq-content__tab-content-close">
               <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -249,8 +248,8 @@
           <div class="faq-content__tab-content">
             <h2 class="faq-content__tab-content-title">Могу ли&nbsp;я&nbsp;оплатить счет от&nbsp;лица компании?</h2>
             <p>
-              Для того, чтобы разместить виджет на&nbsp;вашем сайте, нужно вставить html-код, который вы&nbsp;получите
-              после cоздания виджета.
+              Конечно, мы&nbsp;можем выставить счет на&nbsp;юридическое лицо. Просто пришлите нам реквизиты вашей
+              компании.
             </p>
             <a class="faq-content__tab-content-close">
               <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -265,8 +264,9 @@
               и&nbsp;хайлайтов, которые я&nbsp;могу установить?
             </h2>
             <p>
-              Для того, чтобы разместить виджет на&nbsp;вашем сайте, нужно вставить html-код, который вы&nbsp;получите
-              после cоздания виджета.
+              Количество виджетов и&nbsp;хайлайтов зависит от&nbsp;выбранного вами тарифа. Вы&nbsp;можете <a
+                class="text-link" href="./index.html#tariffs">ознакомиться
+                с&nbsp;тарифами</a>.
             </p>
             <a class="faq-content__tab-content-close">
               <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -284,6 +284,7 @@
       </div>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
       <div class="wrap" data-aos="fade" data-aos-duration="1000">
         <a href=""><img class="footer__logo" src="./images/main/header/webstoryz-logo.svg" alt=""></a>
@@ -297,23 +298,34 @@
           с&nbsp;9:00 до&nbsp;20:00 по&nbsp;Московскому времени
         </p>
         <div class="footer__social-block">
-          <a href="">
+          <a href="https://www.facebook.com/webstoryz" target="_blank">
             <img src="./images/main/footer/facebook-icon.svg" alt="">
           </a>
-          <a href="">
+          <a href="https://t.me/webstoryz" target="_blank">
             <img src="./images/main/footer/telegram-icon.svg" alt="">
           </a>
-          <a href="">
+          <a href="https://vk.com/webstoryz" target="_blank">
             <img src="./images/main/footer/vk-icon.svg" alt="">
           </a>
         </div>
         <div class="footer__contacts">
           <p>
-            115280, Москва, Ленинская слобода 26, строение 5<br>
-            БЦ «Симонов Плаза», офис 1.1.4<br>
+            115280, Москва, Ленинская слобода&nbsp;26, строение&nbsp;5<br>
+            БЦ&nbsp;«Симонов Плаза», офис&nbsp;1.1.4<br>
             Phone: <a href="tel:+74952209689">+7 (495) 220-96-89</a><br>
             E-mail: <a href="mailto:support@webstoryz.com">support@webstoryz.com</a>
           </p>
+        </div>
+        <div class="footer__copyright-block">
+          <span class="footer__copyrights">© 2021 Webstoryz. Все права защищены</span>
+          <div class="footer__docs">
+            <a href="https://docs.google.com/document/d/18t9iEIxmbVlUZRZL0Htyl7HqC3QyeA0gWTq12XDmVaY/edit"
+              target="_blank">Политика
+              конфиденциальности</a>
+            <a href="https://docs.google.com/document/d/1y7ATlny-yKYiDz0xnOmHiui2K9zBmRzdF_dmr5zgzHQ/edit"
+              target="_blank">Условия
+              использования</a>
+          </div>
         </div>
       </div>
     </footer>

@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
   <title>Webstoryz</title>
 </head>
@@ -68,17 +69,17 @@
   <!-- -->
 
   <!-- Request popup -->
-  <div class="request-popup">
+  <div class="request-popup-individual request-popup" id="individual">
     <div class="request-popup__container">
       <h2 class="request-popup__title">Нужна консультация?</h2>
       <p class="request-popup__description">Вы&nbsp;можете написать нам прямо сейчас!</p>
       <p class="request-popup__choose-communication-type">Выберите предпочтительный способ связи:</p>
       <div class="request-popup__communication-types">
-        <a href="">
+        <a href="https://t.me/webstoryz" target="_blank">
           <img src="./images/telegram-icon.svg" width="24" height="24" alt="Телеграм">
           <span>Написать в&nbsp;Телеграм</span>
         </a>
-        <a href="">
+        <a href="https://wa.me/79955001769" target="_blank">
           <img src="./images/whatsapp-icon.svg" width="24" height="24" alt="Whatsapp">
           <span>Написать в&nbsp;Whatsapp</span>
         </a>
@@ -88,15 +89,78 @@
         связался с&nbsp;вами для обсуждения деталей:
       </p>
       <form class="request-popup__form">
-        <input type="text" placeholder="Введите ваше имя">
-        <input type="e-mail" placeholder="Введите ваш номер телефона или email">
-        <button class="btn big">Оставить заявку</button>
+        <input type="text" placeholder="Введите ваше имя" id="name">
+        <input type="text" placeholder="Введите ваш номер телефона или email*" id="contact">
+        <button class="btn big" id="submit">Оставить заявку</button>
         <label class="checkbox">
-          <input class="checkbox__input" type="checkbox" name="" id="">
+          <input class="checkbox__input" type="checkbox" id="agreement" checked>
           <span class="checkbox__view-box"></span>
           <span class="checkbox__description">
-            Нажимая на&nbsp;кнопку, я&nbsp;даю согласие на&nbsp;<a href="">обработку персональных данных</a>
-            и&nbsp;соглашаюсь с&nbsp;<a href="">Политикой конфиденциальности</a>
+            Нажимая на&nbsp;кнопку, я&nbsp;даю согласие на&nbsp;<a
+              href="https://docs.google.com/document/d/1y7ATlny-yKYiDz0xnOmHiui2K9zBmRzdF_dmr5zgzHQ/edit"
+              target="_blank">обработку персональных данных</a>
+            и&nbsp;соглашаюсь с&nbsp;<a
+              href="https://docs.google.com/document/d/18t9iEIxmbVlUZRZL0Htyl7HqC3QyeA0gWTq12XDmVaY/edit"
+              target="_blank">Политикой конфиденциальности</a>
+          </span>
+        </label>
+      </form>
+
+      <a class="request-popup__close-button">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M25.4429 5.4425L24.5579 4.5575L15.0004 14.1162L5.44286 4.5575L4.55786 5.4425L14.1166 15L4.55786 24.5575L5.44286 25.4425L15.0004 15.8837L24.5579 25.4425L25.4429 24.5575L15.8841 15L25.4429 5.4425Z"
+            fill="#C4C4C4" />
+        </svg>
+      </a>
+    </div>
+    <div class="request-popup__overlay popup-overlay"></div>
+  </div>
+  <!-- -->
+
+  <!-- Request popup for entities-->
+  <div class="request-popup-entity request-popup" id="entity">
+    <div class="request-popup__container">
+      <h2 class="request-popup__title">Нужна консультация?</h2>
+      <!-- <p class="request-popup-entity__description">Вы&nbsp;можете написать нам прямо сейчас!</p>
+      <p class="request-popup-entity__choose-communication-type">Выберите предпочтительный способ связи:</p> -->
+      <!-- <div class="request-popup-entity__communication-types">
+        <a href="">
+          <img src="./images/telegram-icon.svg" width="24" height="24" alt="Телеграм">
+          <span>Написать в&nbsp;Телеграм</span>
+        </a>
+        <a href="">
+          <img src="./images/whatsapp-icon.svg" width="24" height="24" alt="Whatsapp">
+          <span>Написать в&nbsp;Whatsapp</span>
+        </a>
+      </div> -->
+      <p class="request-popup__leave-your-details">
+        Оставьте свои данные, чтобы наш менеджер
+        связался с&nbsp;вами для обсуждения деталей:
+      </p>
+      <form class="request-popup__form">
+        <input type="text" placeholder="Введите ваше имя">
+        <select name="companyType" id="companyType">
+          <option selected disabled value="">Выберите тип компании*</option>
+          <option value="1">ООО</option>
+          <option value="2">ИП</option>
+          <option value="3">Самозанятый</option>
+        </select>
+        <input type="text" placeholder="Наименование компании" id="companyName">
+        <input type="text" placeholder="ИНН/ОГРН*" id="companyRequisites" required>
+        <input type="text" placeholder="E-mail*" id="companyEmail" required>
+        <input type="text" placeholder="Телефон" id="companyPhone">
+        <button class="btn big">Оставить заявку</button>
+        <label class="checkbox">
+          <input class="checkbox__input" type="checkbox" checked>
+          <span class="checkbox__view-box"></span>
+          <span class="checkbox__description">
+            Нажимая на&nbsp;кнопку, я&nbsp;даю согласие на&nbsp;<a
+              href="https://docs.google.com/document/d/1y7ATlny-yKYiDz0xnOmHiui2K9zBmRzdF_dmr5zgzHQ/edit"
+              target="_blank">обработку персональных данных</a>
+            и&nbsp;соглашаюсь с&nbsp;<a
+              href="https://docs.google.com/document/d/18t9iEIxmbVlUZRZL0Htyl7HqC3QyeA0gWTq12XDmVaY/edit"
+              target="_blank">Политикой конфиденциальности</a>
           </span>
         </label>
       </form>
@@ -221,7 +285,16 @@
           <p class="widget-example__description">
             <span>Нажмите на&nbsp;хайлайт, чтобы посмотреть веб-сторис</span>
           </p>
-          <img src="./images/main/widget-example/widget.svg" alt="">
+          <script id="ws-script">
+            window.webstoryzSettings = {
+              apiKey: 'aMh5ili9nu750yDaxYlthPrOs2Bb5OC6ET6csHUV7gS0ptckkLQDtrUNG4kRlDAj8XNyrph5M1MLkYAOVT6VhoqWaETWGcdnfMhzhZVC4LLbOoBq3ZoWqTmbEtG5cTQm'
+            }; (function (u) {
+              var s = document.createElement('script');
+              s.type = 'text/javascript'; s.async = true; s.src = u;
+              var x = document.getElementsByTagName('script')[0];
+              x.parentNode.insertBefore(s, x);
+            })('//cdn.webstoryz.com/integration/widget.js');
+          </script>
         </div>
       </section>
 
@@ -330,7 +403,7 @@
             контента
             в&nbsp;web-пространство&nbsp;— веб-сторис. Привлекайте
             новых клиентов
-            и&nbsp;удерживайте их, создавай <a class="about-webstoryz__link interactive"
+            и&nbsp;удерживайте их, создавая <a class="about-webstoryz__link interactive"
               id="interactive">интерактивные</a>
             и&nbsp;<a class="about-webstoryz__link personalized" id="personalized">персонализированные</a>
             веб-сторис,
@@ -423,27 +496,15 @@
                 </div>
 
                 <!-- Polygon background -->
-                <svg width="319" height="357" viewBox="0 0 319 357" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g filter="url(#filter0_d)">
-                    <path
-                      d="M151.5 12.6188C156.45 9.76068 162.55 9.76068 167.5 12.6188L290.497 83.6312C295.447 86.4893 298.497 91.7714 298.497 97.4876V239.512C298.497 245.229 295.447 250.511 290.497 253.369L167.5 324.381C162.55 327.239 156.45 327.239 151.5 324.381L28.5029 253.369C23.5525 250.511 20.5029 245.229 20.5029 239.512V97.4876C20.5029 91.7714 23.5525 86.4893 28.5029 83.6312L151.5 12.6188Z"
-                      fill="white" />
-                  </g>
-                  <defs>
-                    <filter id="filter0_d" x="0.50293" y="0.475586" width="317.994" height="356.05"
-                      filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                      <feColorMatrix in="SourceAlpha" type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-                      <feOffset dy="10" />
-                      <feGaussianBlur stdDeviation="10" />
-                      <feColorMatrix type="matrix"
-                        values="0 0 0 0 0.160784 0 0 0 0 0.160784 0 0 0 0 0.164706 0 0 0 0.07 0" />
-                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
-                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
-                    </filter>
-                  </defs>
-                </svg>
+                <picture>
+                  <source
+                    srcset="./images/main/key-metrics/polygon-bg.webp, ./images/main/key-metrics/polygon-bg@2x.webp 2x"
+                    type="image/webp">
+                  <source
+                    srcset="./images/main/key-metrics/polygon-bg.png, ./images/main/key-metrics/polygon-bg@2x.png 2x"
+                    type="image/png">
+                  <img src="./images/main/key-metrics/polygon-bg.png" alt="">
+                </picture>
                 <!--  -->
               </div>
 
@@ -457,7 +518,16 @@
                 </div>
 
                 <!-- Polygon background -->
-                <svg width="319" height="357" viewBox="0 0 319 357" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <picture>
+                  <source
+                    srcset="./images/main/key-metrics/polygon-bg.webp, ./images/main/key-metrics/polygon-bg@2x.webp 2x"
+                    type="image/webp">
+                  <source
+                    srcset="./images/main/key-metrics/polygon-bg.png, ./images/main/key-metrics/polygon-bg@2x.png 2x"
+                    type="image/png">
+                  <img src="./images/main/key-metrics/polygon-bg.png" alt="">
+                </picture>
+                <!-- <svg width="319" height="357" viewBox="0 0 319 357" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_d)">
                     <path
                       d="M151.5 12.6188C156.45 9.76068 162.55 9.76068 167.5 12.6188L290.497 83.6312C295.447 86.4893 298.497 91.7714 298.497 97.4876V239.512C298.497 245.229 295.447 250.511 290.497 253.369L167.5 324.381C162.55 327.239 156.45 327.239 151.5 324.381L28.5029 253.369C23.5525 250.511 20.5029 245.229 20.5029 239.512V97.4876C20.5029 91.7714 23.5525 86.4893 28.5029 83.6312L151.5 12.6188Z"
@@ -477,7 +547,7 @@
                       <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
                     </filter>
                   </defs>
-                </svg>
+                </svg> -->
                 <!--  -->
               </div>
 
@@ -491,7 +561,16 @@
                 </div>
 
                 <!-- Polygon background -->
-                <svg width="319" height="357" viewBox="0 0 319 357" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <picture>
+                  <source
+                    srcset="./images/main/key-metrics/polygon-bg.webp, ./images/main/key-metrics/polygon-bg@2x.webp 2x"
+                    type="image/webp">
+                  <source
+                    srcset="./images/main/key-metrics/polygon-bg.png, ./images/main/key-metrics/polygon-bg@2x.png 2x"
+                    type="image/png">
+                  <img src="./images/main/key-metrics/polygon-bg.png" alt="">
+                </picture>
+                <!-- <svg width="319" height="357" viewBox="0 0 319 357" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_d)">
                     <path
                       d="M151.5 12.6188C156.45 9.76068 162.55 9.76068 167.5 12.6188L290.497 83.6312C295.447 86.4893 298.497 91.7714 298.497 97.4876V239.512C298.497 245.229 295.447 250.511 290.497 253.369L167.5 324.381C162.55 327.239 156.45 327.239 151.5 324.381L28.5029 253.369C23.5525 250.511 20.5029 245.229 20.5029 239.512V97.4876C20.5029 91.7714 23.5525 86.4893 28.5029 83.6312L151.5 12.6188Z"
@@ -511,7 +590,7 @@
                       <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
                     </filter>
                   </defs>
-                </svg>
+                </svg> -->
                 <!--  -->
               </div>
             </div>
@@ -738,18 +817,18 @@
               <div class="four-steps__slide-text">
                 <span class="four-steps__slide-number">1</span>
                 <h3 class="four-steps__slide-title">Создайте виджет</h3>
-                <p class="four-steps__slide-description">
+                <!-- <p class="four-steps__slide-description">
                   Текст-описание максимально кратко
                   о&nbsp;том, как это можно сделать
-                </p>
+                </p> -->
                 <button class="btn big request-button">Подключить пробный 14-дневный период</button>
-                <div class="four-steps__slide-setup-widget">
+                <a class="four-steps__slide-setup-widget request-button">
                   <picture>
                     <source srcset="./images/main/four-steps/key.png, ./images/main/four-steps/key@2x.png">
                     <img src="./images/main/four-steps/key.png" alt="">
                   </picture>
                   <span>Установить виджет <strong>«под ключ»</strong></span>
-                </div>
+                </a>
               </div>
               <div class="four-steps__slide-image">
                 <picture>
@@ -777,18 +856,18 @@
               <div class="four-steps__slide-text">
                 <span class="four-steps__slide-number">2</span>
                 <h3 class="four-steps__slide-title">Создайте веб-сторис</h3>
-                <p class="four-steps__slide-description">
+                <!-- <p class="four-steps__slide-description">
                   Текст-описание максимально кратко
                   о&nbsp;том, как это можно сделать
-                </p>
+                </p> -->
                 <button class="btn big request-button">Подключить пробный 14-дневный период</button>
-                <div class="four-steps__slide-setup-widget">
+                <a class="four-steps__slide-setup-widget request-button">
                   <picture>
                     <source srcset="./images/main/four-steps/key.png, ./images/main/four-steps/key@2x.png">
                     <img src="./images/main/four-steps/key.png" alt="">
                   </picture>
                   <span>Установить виджет <strong>«под ключ»</strong></span>
-                </div>
+                </a>
               </div>
               <div class="four-steps__slide-image">
                 <picture>
@@ -816,18 +895,18 @@
               <div class="four-steps__slide-text">
                 <span class="four-steps__slide-number">3</span>
                 <h3 class="four-steps__slide-title">Добавьте веб-сторис к&nbsp;вашему виджету</h3>
-                <p class="four-steps__slide-description">
+                <!-- <p class="four-steps__slide-description">
                   Текст-описание максимально кратко
                   о&nbsp;том, как это можно сделать
-                </p>
+                </p> -->
                 <button class="btn big request-button">Подключить пробный 14-дневный период</button>
-                <div class="four-steps__slide-setup-widget">
+                <a class="four-steps__slide-setup-widget request-button">
                   <picture>
                     <source srcset="./images/main/four-steps/key.png, ./images/main/four-steps/key@2x.png">
                     <img src="./images/main/four-steps/key.png" alt="">
                   </picture>
                   <span>Установить виджет <strong>«под ключ»</strong></span>
-                </div>
+                </a>
               </div>
               <div class="four-steps__slide-image">
                 <picture>
@@ -855,18 +934,18 @@
               <div class="four-steps__slide-text">
                 <span class="four-steps__slide-number">4</span>
                 <h3 class="four-steps__slide-title">Опубликуйте ваш виджет на&nbsp;сайте</h3>
-                <p class="four-steps__slide-description">
+                <!-- <p class="four-steps__slide-description">
                   Текст-описание максимально кратко
                   о&nbsp;том, как это можно сделать
-                </p>
+                </p> -->
                 <button class="btn big request-button">Подключить пробный 14-дневный период</button>
-                <div class="four-steps__slide-setup-widget">
+                <a class="four-steps__slide-setup-widget request-button">
                   <picture>
                     <source srcset="./images/main/four-steps/key.png, ./images/main/four-steps/key@2x.png">
                     <img src="./images/main/four-steps/key.png" alt="">
                   </picture>
                   <span>Установить виджет <strong>«под ключ»</strong></span>
-                </div>
+                </a>
               </div>
               <div class="four-steps__slide-image">
                 <div class="popup-confirm">
@@ -916,14 +995,16 @@
             <!-- Tab 1 -->
             <div class="features__tab-content active" id="customizationTabContent">
               <div class="features__tab-image">
-                <div class="t-icon">
-                  <img src="./images/main/features/tab-1/t.svg" alt="">
-                </div>
-                <div class="roboto">
-                  <img src="./images/main/features/tab-1/roboto.svg" alt="">
-                </div>
-                <div class="circles">
-                  <img src="./images/main/features/tab-1/circles.svg" alt="">
+                <div class="features__tab-image-container">
+                  <div class="t-icon">
+                    <img src="./images/main/features/tab-1/t.svg" alt="">
+                  </div>
+                  <div class="roboto">
+                    <img src="./images/main/features/tab-1/roboto.svg" alt="">
+                  </div>
+                  <div class="circles">
+                    <img src="./images/main/features/tab-1/circles.svg" alt="">
+                  </div>
                 </div>
               </div>
 
@@ -967,8 +1048,24 @@
             <!-- Tab 2 -->
             <div class="features__tab-content" id="analyticsTabContent">
               <div class="features__tab-image">
-                <div class="diagram">
-                  <img src="./images/main/features/tab-2/diagram.svg" alt="">
+                <div class="features__tab-image-container">
+                  <picture>
+                    <source
+                      srcset="./images/main/features/tab-2/gourmet.webp, ./images/main/features/tab-2/gourmet@2x.webp 2x"
+                      type="image/webp">
+                    <source
+                      srcset="./images/main/features/tab-2/gourmet.jpg, ./images/main/features/tab-2/gourmet@2x.jpg 2x"
+                      type="image/jpg">
+                    <img class="gourmet" src="./images/main/features/tab-2/gourmet.jpg" alt="">
+                  </picture>
+                  <picture>
+                    <source srcset="./images/main/features/tab-2/diagram@2x.webp 2x" type="image/webp">
+                    <source
+                      srcset="./images/main/features/tab-2/diagram.jpg, ./images/main/features/tab-2/diagram@2x.jpg 2x"
+                      type="image/jpg">
+                    <img class="diagram" src="./images/main/features/tab-2/diagram.jpg" alt="">
+                  </picture>
+                  <img class="vews" src="./images/main/features/tab-2/vews.svg" alt="">
                 </div>
               </div>
 
@@ -1020,18 +1117,20 @@
             <!-- Tab 3 -->
             <div class="features__tab-content" id="convertationTabContent">
               <div class="features__tab-image">
-                <img class="yes-no" src="./images/main/features/tab-3/yes-no.svg" alt="">
-                <div class="smiles">
-                  <span>🤝</span>
-                  <span>😍</span>
-                  <span>🎅</span>
-                  <span>👿</span>
-                  <span>🤗</span>
+                <div class="features__tab-image-container">
+                  <img class="yes-no" src="./images/main/features/tab-3/yes-no.svg" alt="">
+                  <div class="smiles">
+                    <span>🤝</span>
+                    <span>😍</span>
+                    <span>🎅</span>
+                    <span>👿</span>
+                    <span>🤗</span>
+                  </div>
+                  <picture>
+                    <source srcset="./images/main/features/tab-3/man.jpg, ./images/main/features/tab-3/man@2x.jpg 2x">
+                    <img class="man" src="./images/main/features/tab-3/man.jpg" alt="">
+                  </picture>
                 </div>
-                <picture>
-                  <source srcset="./images/main/features/tab-3/man.jpg, ./images/main/features/tab-3/man@2x.jpg 2x">
-                  <img class="man" src="./images/main/features/tab-3/man.jpg" alt="">
-                </picture>
               </div>
 
               <div class="features__tab-text-block">
@@ -1123,20 +1222,29 @@
                     </span>
                   </li>
                 </ul>
-                <ul class="features__links-list">
-                  <li><a href="">Инструкция по интеграции SDK для iOS</a></li>
-                  <li><a href="">Инструкция по интеграции SDK для Android</a></li>
-                </ul>
+                <!-- <ul class="features__links-list">
+                  <li><a href="" target="_blank">Инструкция по интеграции SDK для iOS</a></li>
+                  <li><a href="" target="_blank">Инструкция по интеграции SDK для Android</a></li>
+                </ul> -->
               </div>
             </div>
 
             <!-- Tab 5 -->
             <div class="features__tab-content" id="personalizationTabContent">
               <div class="features__tab-image">
-                <picture>
-                  <source srcset="./images/main/features/tab-5/woman.jpg, ./images/main/features/tab-5/woman@2x.jpg 2x">
-                  <img class="woman" src="./images/main/features/tab-5/woman.jpg" alt="">
-                </picture>
+                <div class="features__tab-image-container">
+                  <picture>
+                    <source
+                      srcset="./images/main/features/tab-5/screen.webp, ./images/main/features/tab-5/screen.webp 2x"
+                      type="image/webp">
+                    <source srcset="./images/main/features/tab-5/screen.jpg, ./images/main/features/tab-5/screen.jpg 2x"
+                      type="image/jpg">
+                    <img class="screen" src="./images/main/features/tab-5/screen.jpg" alt="">
+                  </picture>
+                  <div class="tags">
+                    <img src="./images/main/features/tab-5/tags.svg" alt="">
+                  </div>
+                </div>
               </div>
 
               <div class="features__tab-text-block">
@@ -1175,9 +1283,9 @@
           <p class="tariffs__description">Инвестиции в развитие, которые
             окупают себя в кратчайшие сроки!</p>
           <div class="tariffs__switch-block">
-            <span class="tariffs__switch-block-discount">Скидка&nbsp;10%</span>
+            <span class="tariffs__switch-block-discount active">Скидка&nbsp;10%</span>
             <label class="switch">
-              <input type="checkbox" class="switch__input" checked>
+              <input type="checkbox" class="tariffs__switch-input switch__input" checked>
               <div class="switch__block"></div>
               <span class="switch__left">За&nbsp;месяц</span>
               <span class="switch__right">За&nbsp;год</span>
@@ -1193,7 +1301,7 @@
                   <p class="tariffs__help-description">Напишите нам, мы&nbsp;поможем выбрать
                     подходящий
                     тариф.</p>
-                  <a href="">Напишите&nbsp;нам</a>
+                  <a class="request-button">Напишите&nbsp;нам</a>
                 </div>
                 <ul class="tariffs__features-names-list">
                   <li>
@@ -1288,7 +1396,8 @@
                   </p>
                 </div>
                 <div class="tariffs__tariff-features-block">
-                  <span class="tariffs__tariff-price">4 490 ₽<span>/мес.</span></span>
+                  <span class="tariffs__tariff-price"><span class="tariffs__tariff-price-value-business">4 490
+                      ₽</span><span class="tariffs__tariff-price-month">/мес.</span></span>
                   <button class="btn small green request-button">Подключить</button>
                   <ul class="tariffs__features-list">
                     <li>
@@ -1338,7 +1447,8 @@
                   </p>
                 </div>
                 <div class="tariffs__tariff-features-block">
-                  <span class="tariffs__tariff-price">8 990 ₽<span>/мес.</span></span>
+                  <span class="tariffs__tariff-price"><span class="tariffs__tariff-price-value-premium">8 990
+                      ₽</span><span class="tariffs__tariff-price-month">/мес.</span></span>
                   <button class="btn-outlined small green request-button">Подключить</button>
                   <ul class="tariffs__features-list">
                     <li>
@@ -1380,7 +1490,8 @@
             </div>
 
             <div class="tariffs__table-footer">
-              <a href="">Хочу оплатить как&nbsp;юридическое лицо</a>
+              <a class="request-button-entity" style="opacity: 0; pointer-events: none">Хочу оплатить
+                как&nbsp;юридическое лицо</a>
             </div>
           </div>
 
@@ -1398,7 +1509,7 @@
               <p class="additional-services__description">Наша команда создаст веб-сторис и&nbsp;будет
                 обновлять контент.
               </p>
-              <p class="additional-services__price"><span>от</span> 4 500 ₽<br><span>/ мес</span></p>
+              <p class="additional-services__price"><span>от</span> 4 999 ₽<br><span>/ мес</span></p>
               <picture>
                 <source
                   srcset="./images/main/additional-services/editor.png, ./images/main/additional-services/editor@2x.png 2x">
@@ -1416,7 +1527,7 @@
                   Создание и&nbsp;наполнение
                   шаблонов веб-сторис
                 </h3>
-                <p class="additional-services__price"><span>от</span> 1 500 ₽<br><span>/ за один
+                <p class="additional-services__price"><span>от</span> 1 499 ₽<br><span>/ за один
                     шаблон</span></p>
               </div>
               <div class="additional-services__examples">
@@ -1576,6 +1687,7 @@
                     type="image/png">
                   <img src="./images/main/examples/screens/organika/organika.png" alt="Organika">
                 </picture>
+                <!-- <a class="btn-outlined medium green">Смотреть live-версию</a> -->
               </div>
               <div class="swiper-slide">
                 <picture>
@@ -1587,6 +1699,9 @@
                     type="image/png">
                   <img src="./images/main/examples/screens/startup-show/startup-show.png" alt="Startup Show">
                 </picture>
+                <a href="https://examples.webstoryz.com/startupshow/" target="_blank"
+                  class="btn-outlined medium green">Смотреть
+                  live-версию</a>
               </div>
               <div class="swiper-slide">
                 <picture>
@@ -1598,6 +1713,8 @@
                     type="image/png">
                   <img src="./images/main/examples/screens/foodband/foodband.png" alt="Foodband">
                 </picture>
+                <a href="https://examples.webstoryz.com/foodband/" target="_blank"
+                  class="btn-outlined medium green">Смотреть live-версию</a>
               </div>
               <div class="swiper-slide">
                 <picture>
@@ -1609,6 +1726,8 @@
                     type="image/png">
                   <img src="./images/main/examples/screens/glaveda/glaveda.png" alt="Glaveda">
                 </picture>
+                <a href="https://examples.webstoryz.com/glaveda/" target="_blank"
+                  class="btn-outlined medium green">Смотреть live-версию</a>
               </div>
               <div class="swiper-slide">
                 <picture>
@@ -1620,6 +1739,8 @@
                     type="image/png">
                   <img src="./images/main/examples/screens/mts/mts.png" alt="МТС">
                 </picture>
+                <a href="https://examples.webstoryz.com/mgts/" target="_blank"
+                  class="btn-outlined medium green">Смотреть live-версию</a>
               </div>
               <div class="swiper-slide">
                 <picture>
@@ -1631,6 +1752,8 @@
                     type="image/png">
                   <img src="./images/main/examples/screens/ceorooms/ceorooms.png" alt="CEOROOMS">
                 </picture>
+                <a href="https://examples.webstoryz.com/ceorooms/" target="_blank"
+                  class="btn-outlined medium green">Смотреть live-версию</a>
               </div>
               <div class="swiper-slide">
                 <picture>
@@ -1642,6 +1765,7 @@
                     type="image/png">
                   <img src="./images/main/examples/screens/city/city.png" alt="City">
                 </picture>
+                <!-- <a class="btn-outlined medium green">Смотреть live-версию</a> -->
               </div>
               <div class="swiper-slide">
                 <picture>
@@ -1653,9 +1777,10 @@
                     type="image/png">
                   <img src="./images/main/examples/screens/beauty-brands/beauty-brands.png" alt="Beauty Brands">
                 </picture>
+                <!-- <a class="btn-outlined medium green">Смотреть live-версию</a> -->
               </div>
             </div>
-            <button class="btn-outlined medium green">Смотреть live-версию</button>
+            <!-- <a class="btn-outlined medium green">Смотреть live-версию</a> -->
           </div>
 
           <div thumbsSlider="" class="examples__right-column swiper-container swiper-right">
@@ -1736,7 +1861,6 @@
                 </p>
               </div>
             </div>
-            <div class="swiper-scrollbar"></div>
           </div>
           <button class="btn big mobile request-button">Хочу&nbsp;так&nbsp;же!</button>
         </div>
@@ -1757,23 +1881,34 @@
           с&nbsp;9:00 до&nbsp;20:00 по&nbsp;Московскому времени
         </p>
         <div class="footer__social-block">
-          <a href="">
+          <a href="https://www.facebook.com/webstoryz" target="_blank">
             <img src="./images/main/footer/facebook-icon.svg" alt="">
           </a>
-          <a href="">
+          <a href="https://t.me/webstoryz" target="_blank">
             <img src="./images/main/footer/telegram-icon.svg" alt="">
           </a>
-          <a href="">
+          <a href="https://vk.com/webstoryz" target="_blank">
             <img src="./images/main/footer/vk-icon.svg" alt="">
           </a>
         </div>
         <div class="footer__contacts">
           <p>
-            115280, Москва, Ленинская слобода 26, строение 5<br>
-            БЦ «Симонов Плаза», офис 1.1.4<br>
+            115280, Москва, Ленинская слобода&nbsp;26, строение&nbsp;5<br>
+            БЦ&nbsp;«Симонов Плаза», офис&nbsp;1.1.4<br>
             Phone: <a href="tel:+74952209689">+7 (495) 220-96-89</a><br>
             E-mail: <a href="mailto:support@webstoryz.com">support@webstoryz.com</a>
           </p>
+        </div>
+        <div class="footer__copyright-block">
+          <span class="footer__copyrights">© 2021 Webstoryz. Все права защищены</span>
+          <div class="footer__docs">
+            <a href="https://docs.google.com/document/d/18t9iEIxmbVlUZRZL0Htyl7HqC3QyeA0gWTq12XDmVaY/edit"
+              target="_blank">Политика
+              конфиденциальности</a>
+            <a href="https://docs.google.com/document/d/1y7ATlny-yKYiDz0xnOmHiui2K9zBmRzdF_dmr5zgzHQ/edit"
+              target="_blank">Условия
+              использования</a>
+          </div>
         </div>
       </div>
     </footer>
